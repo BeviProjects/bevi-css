@@ -1,0 +1,52 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin position {
+	@include mixin.property(position, static, relative, absolute, fixed, sticky);
+}
+
+@mixin direction($property) {
+	&-0 {
+		#{$property}: 0;
+	}
+	&-50 {
+		#{$property}: 50%;
+	}
+	&-100 {
+		#{$property}: 100%;
+	}
+}
+
+@mixin inset {
+	&-auto {
+		inset: auto;
+	}
+	&-0 {
+		inset: 0;
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'ps') {
+		@include position;
+	}
+
+	@include mixin.responsive-class(false, $breakpoint, 'top') {
+		@include direction(top);
+	}
+
+	@include mixin.responsive-class(false, $breakpoint, 'bottom') {
+		@include direction(bottom);
+	}
+
+	@include mixin.responsive-class(false, $breakpoint, 'left') {
+		@include direction(left);
+	}
+
+	@include mixin.responsive-class(false, $breakpoint, 'right') {
+		@include direction(right);
+	}
+
+	@include mixin.responsive-class(false, $breakpoint, 'inset') {
+		@include inset;
+	}
+}

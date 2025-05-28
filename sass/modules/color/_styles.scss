@@ -1,0 +1,6 @@
+@use 'mixins' as m;
+
+@include m.class-generator('color');
+@include m.class-generator('background-color', 'bg');
+@include m.class-generator('color', 'color', true);
+@include m.class-generator('background-color', 'bg', true);

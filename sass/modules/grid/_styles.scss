@@ -1,0 +1,6 @@
+@use 'mixins' as m;
+
+.grid {
+	@include m.template-column;
+	@include m.template-row;
+}

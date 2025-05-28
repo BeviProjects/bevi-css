@@ -1,0 +1,7 @@
+@mixin variables {
+	--bv-scrollbar-size: 0.75rem;
+	--bv-scrollbar-background: var(--gray-80);
+	--bv-scrollbar-radius: 1rem;
+	--bv-scrollbar-color: var(--violet-60);
+	--bv-scrollbar-color-hover: var(--violet-40);
+}

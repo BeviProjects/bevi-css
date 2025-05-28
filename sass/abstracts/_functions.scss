@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use 'variables' as v;
+
+/// Function responsible for returning the value of a breakpoint
+///
+/// @require {variable} breakpoints - Variable with all breakpoints
+///
+/// @param {variable} key - Key to access the breakpoint value
+///
+/// @example scss - #{get-breakpoint('sm'))}
+///
+/// @output Value of a breakpoint
+@function get-breakpoint($key) {
+	@return map.get(v.$breakpoints, $key);
+}
+
+@function get-size($id, $property: null) {
+	@each $size in v.$sizes {
+		@if map.get($size, 'id') == $id {
+			@if $property == null {
+				@return $size;
+			} @else {
+				$value: map.get($size, $property);
+
+				@if $value == null {
+					@error "Property `#{$property}` not found in size with id `#{$id}`.";
+				}
+
+				@return $value;
+			}
+		}
+	}
+
+	@error "Size with id `#{$id}` not found.";
+	@return null;
+}

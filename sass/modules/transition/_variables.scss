@@ -1,0 +1,12 @@
+@mixin variables {
+	// Transition duration
+	--duration-fast: 64ms;
+	--duration-normal: 256ms;
+	--duration-slow: 384ms;
+
+	// Transition timing function
+	--ease-linear: linear;
+	--ease-in: cubic-bezier(0.47, 0, 0.75, 0.71);
+	--ease-out: cubic-bezier(0.39, 0.57, 0.56, 1);
+	--ease-in-out: cubic-bezier(0.44, 0.05, 0.55, 0.95);
+}

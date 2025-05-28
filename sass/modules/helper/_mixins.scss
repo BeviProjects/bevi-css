@@ -1,0 +1,173 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin all {
+	@include mixin.property(all, initial, inherit, unset, revert);
+}
+
+@mixin aspect-ratio {
+	&-auto {
+		aspect-ratio: auto;
+	}
+	&-square {
+		aspect-ratio: 1 / 1;
+	}
+	&-video {
+		aspect-ratio: 16 / 9;
+	}
+}
+
+@mixin container-type {
+	@include mixin.property(container-type, normal, size, inline-size);
+}
+
+@mixin cursor {
+	@include mixin.property(cursor, default, none, pointer, text);
+}
+
+@mixin display {
+	@include mixin.property(display, block, inline, inline-block, none);
+	@include mixin.display-flex;
+	@include mixin.display-grid;
+}
+
+@mixin flex-bgs {
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+@mixin list-style {
+	@include mixin.property(list-style, none, inside, outside);
+}
+
+@mixin object-fit {
+	@include mixin.property(object-fit, contain, cover, fill, none, scale-down);
+}
+
+@mixin overflow {
+	@include mixin.property(overflow, hidden, auto, scroll);
+}
+
+@mixin shadow {
+	&-none {
+		box-shadow: none;
+	}
+	&-sm {
+		box-shadow: var(--bv-shadow-sm);
+	}
+	&-md {
+		box-shadow: var(--bv-shadow-md);
+	}
+	&-lg {
+		box-shadow: var(--bv-shadow-lg);
+	}
+	&-xl {
+		box-shadow: var(--bv-shadow-xl);
+	}
+}
+
+@mixin width {
+	&-100,
+	&-fill {
+		width: 100%;
+	}
+
+	&-50 {
+		width: 50%;
+	}
+
+	&-fit {
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+}
+
+@mixin height {
+	&-100,
+	&-fill {
+		height: 100%;
+	}
+
+	&-50 {
+		height: 50%;
+	}
+
+	&-auto {
+		height: auto;
+	}
+}
+
+@mixin visibility {
+	&-hidden {
+		visibility: hidden;
+	}
+	&-visible {
+		visibility: visible;
+	}
+}
+
+@mixin white-space {
+	@include mixin.property(white-space, normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
+}
+
+@mixin z-index {
+	&-auto {
+		z-index: auto;
+	}
+	@for $i from -1 through 8 {
+		@if $i == -1 {
+			&-negative {
+				z-index: $i;
+			}
+		} @else {
+			&-#{$i} {
+				z-index: $i;
+			}
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'all') {
+		@include all;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'aspect-ratio') {
+		@include aspect-ratio;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'cursor') {
+		@include cursor;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'ds') {
+		@include display;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'flex-bgs') {
+		@include flex-bgs;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'list-style') {
+		@include list-style;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'object') {
+		@include object-fit;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'ovf') {
+		@include overflow;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'shadow') {
+		@include shadow;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'w') {
+		@include width;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'h') {
+		@include height;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'visibility') {
+		@include visibility;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'white-space') {
+		@include white-space;
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'z-index') {
+		@include z-index;
+	}
+}

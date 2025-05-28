@@ -1,0 +1,150 @@
+// Lista com todos os breakpoints
+$breakpoints: (
+	'2xl': 96rem,
+	'xl': 80rem,
+	'lg': 64rem,
+	'md': 48rem,
+	'sm': 40rem,
+);
+
+// Lista com todos os tamanhos
+$sizes: (
+	(
+		id: 1,
+		name: '6xs',
+		valuePX: '1',
+		valueEM: '0.0625',
+	),
+	(
+		id: 2,
+		name: '5xs',
+		valuePX: '2',
+		valueEM: '0.125',
+	),
+	(
+		id: 3,
+		name: '4xs',
+		valuePX: '4',
+		valueEM: '0.25',
+	),
+	(
+		id: 4,
+		name: '3xs',
+		valuePX: '6',
+		valueEM: '0.375',
+	),
+	(
+		id: 5,
+		name: '2xs',
+		valuePX: '8',
+		valueEM: '0.5',
+	),
+	(
+		id: 6,
+		name: 'xs',
+		valuePX: '10',
+		valueEM: '0.625',
+	),
+	(
+		id: 7,
+		name: 'sm',
+		valuePX: '12',
+		valueEM: '0.75',
+	),
+	(
+		id: 8,
+		name: 'md',
+		valuePX: '16',
+		valueEM: '1',
+	),
+	(
+		id: 9,
+		name: 'lg',
+		valuePX: '20',
+		valueEM: '1.25',
+	),
+	(
+		id: 10,
+		name: 'xl',
+		valuePX: '24',
+		valueEM: '1.5',
+	),
+	(
+		id: 11,
+		name: '2xl',
+		valuePX: '32',
+		valueEM: '2',
+	),
+	(
+		id: 12,
+		name: '3xl',
+		valuePX: '40',
+		valueEM: '2.5',
+	),
+	(
+		id: 13,
+		name: '4xl',
+		valuePX: '48',
+		valueEM: '3',
+	),
+	(
+		id: 14,
+		name: '5xl',
+		valuePX: '64',
+		valueEM: '4',
+	),
+	(
+		id: 15,
+		name: '6xl',
+		valuePX: '72',
+		valueEM: '4.5',
+	),
+	(
+		id: 16,
+		name: '7xl',
+		valuePX: '96',
+		valueEM: '6',
+	),
+	(
+		id: 17,
+		name: '8xl',
+		valuePX: '128',
+		valueEM: '8',
+	),
+	(
+		id: 18,
+		name: '9xl',
+		valuePX: '192',
+		valueEM: '12',
+	),
+	(
+		id: 19,
+		name: '10xl',
+		valuePX: '256',
+		valueEM: '16',
+	),
+	(
+		id: 20,
+		name: '12xl',
+		valuePX: '384',
+		valueEM: '24',
+	),
+	(
+		id: 21,
+		name: '13xl',
+		valuePX: '512',
+		valueEM: '32',
+	),
+	(
+		id: 22,
+		name: '14xl',
+		valuePX: '768',
+		valueEM: '48',
+	),
+	(
+		id: 23,
+		name: '15xl',
+		valuePX: '1024',
+		valueEM: '64',
+	)
+);

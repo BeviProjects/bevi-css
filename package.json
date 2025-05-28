@@ -1,0 +1,39 @@
+{
+	"name": "bevi-css",
+	"private": false,
+	"type": "module",
+	"main": "index.js",
+	"version": "1.0.0",
+	"description": "Um framekwork CSS para o Bevi",
+	"author": "André Luiz",
+	"homepage": "https://github.com/BeviProjects/bevi-css#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BeviProjects/bevi-css.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BeviProjects/bevi-css/issues"
+	},
+	"files": [
+		"dist/main.min.css"
+	],
+	"license": "MIT",
+	"keywords": [
+		"bevi",
+		"bevi-css",
+		"bevicss",
+		"css-framework"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"format": "prettier --write .",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"clean-css": "^5.3.3",
+		"prettier": "^3.5.3",
+		"sass": "^1.87.0",
+		"vite": "^6.3.5"
+	}
+}

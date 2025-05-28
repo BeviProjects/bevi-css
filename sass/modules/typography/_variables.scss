@@ -1,0 +1,51 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin variables {
+	--font-family: 'Nunito Sans', 'Nunito', sans-serif;
+	--font-family-heading: var(--font-family);
+	--font-family-display: var(--font-family);
+	--font-family-title: var(--font-family);
+	--font-family-text: var(--font-family);
+	--font-family-code: var(--font-family);
+
+	--heading-1: 2.5em;
+	--heading-2: 2em;
+	--heading-3: 1.5em;
+	--heading-4: 1.25em;
+	--heading-5: 1em;
+	--heading-6: 0.75em;
+
+	--display-xl: 12em;
+	--display-lg: 6em;
+	--display-md: 4.5em;
+	--display-sm: 4em;
+	--display-xs: 3em;
+
+	--title-lg: 2.5em;
+	--title-md: 2em;
+	--title-sm: 1.5em;
+	--title-xs: 1.25em;
+	--title-2xs: 1em;
+	--title-3xs: 0.75em;
+
+	@include mixin.var-specific-range(font-size, 6, 9);
+
+	--font-weight-heading: 400;
+	--font-weight-display: 400;
+	--font-weight-title: 600;
+	--font-weight-text: 400;
+	--font-weight-code: var(--font-family-text);
+
+	--heading-line-height: 100%;
+	--display-line-height: 100%;
+	--title-line-height: 100%;
+	--font-line-height: 1.4;
+
+	--small-size: 0.75rem;
+
+	--heading-color: initial;
+	--display-color: initial;
+	--title-color: initial;
+	--text-color: initial;
+	--code-color: initial;
+}

@@ -1,0 +1,22 @@
+@use 'mixins' as m;
+
+.ps {
+	@include m.position;
+}
+
+.top {
+	@include m.direction(top);
+}
+.bottom {
+	@include m.direction(bottom);
+}
+.left {
+	@include m.direction(left);
+}
+.right {
+	@include m.direction(right);
+}
+
+.inset {
+	@include m.inset;
+}

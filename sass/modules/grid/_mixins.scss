@@ -1,0 +1,24 @@
+@use '../../abstracts/mixins' as abstract;
+
+@mixin template-column {
+	@for $i from 1 through 6 {
+		&-tpl-col-#{$i} {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+}
+
+@mixin template-row {
+	@for $i from 1 through 6 {
+		&-tpl-row-#{$i} {
+			grid-template-rows: repeat(#{$i}, 1fr);
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(false, $breakpoint, 'grid') {
+		@include template-column;
+		@include template-row;
+	}
+}

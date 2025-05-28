@@ -1,0 +1,272 @@
+@use 'sass:map';
+
+@use 'variables' as v;
+@use 'functions' as f;
+
+/// Sumário:
+/// ---- Variables ----
+/// 34 - Mixin para gerar variáveis de tamanho
+/// 56 - Mixin repsonsável por gerar variáveis CSS com base na lista de tamanhos e um range específico
+///
+/// ---- Classes ----
+/// 72 - Mixin para gerar classes com variantes
+/// 91 - Mixin para gerar classes com variantes de tamanho
+/// 112 - Mixin for generating classes with custom names based on a CSS property
+/// 131 - Mixin for generating classes with specific range of sizes
+/// 148 - Mixin for generating classes with a specific property set to 'none'
+///
+/// ---- Responsives ----
+/// 164 - Mixin for creating media queries for screens smaller than the specified breakpoint
+/// 177 - Shortcut mixin for mobile devices (smaller than 'lg' breakpoint)
+/// 194 - Mixin for creating responsive classes with optional prefixes
+///
+/// ---- Utilities ----
+/// 225 - Mixin para gerar classes de flexbox
+/// 264 - Mixin para gerar classes de grid
+
+/// Mixin para gerar todas as variáveis de tamanho
+///
+/// @requires {variable} sizes - Lista com todos os tamanhos
+///
+/// @example scss - @include size-variables-generator;
+///
+/// @output   --6xs: 0.0625rem; --5xs: 0.125rem; --4xs: 0.25rem; ...
+@mixin size-variables-generator() {
+	@each $size in v.$sizes {
+		$id: map.get($size, id);
+		$name: map.get($size, name);
+		$valueEM: map.get($size, valueEM);
+
+		--#{$name}: #{$valueEM}rem;
+	}
+}
+
+/// Mixin repsonsável por gerar variáveis CSS com base na lista de tamanhos e um range específico
+///
+/// @requires {function} f.get-size - Função para obter o tamanho baseado no índice
+/// @requires {variable} sizes - Lista de tamanhos
+///
+/// @param {string} property - Propriedade CSS a ser aplicada
+/// @param {number} num-start - Número inicial do range (padrão: 1)
+/// @param {number} num-end - Número final do range (padrão: 16)
+///
+/// @example scss - @include var-specific-range('padding', 1, 16);
+///
+/// @output scss - --padding-1: var(--1); --padding-2: var(--2); --padding-3: var(--3); ...
+@mixin var-specific-range($property, $num-start: 1, $num-end: 16) {
+	@for $i from $num-start through $num-end {
+		$var-name: f.get-size($i, 'name');
+		--#{$property}-#{$var-name}: var(--#{$var-name});
+	}
+}
+
+/// ---- Classes ----
+/// Mixin para gerar classes com variantes
+///
+/// @param {string} property - Propriedade CSS a ser aplicada
+/// @param {string} classes - Lista variações de classes a serem aplicadas
+///
+/// @example scss - @include property("cursor", "default", "none", "pointer");
+///
+/// @output scss - .cursor-default { cursor: default; } .cursor-none { cursor: none; } .cursor-pointer { cursor: pointer; }
+@mixin property($property, $classes...) {
+	@each $class in $classes {
+		&-#{$class} {
+			#{$property}: $class;
+		}
+	}
+}
+
+/// Mixin para gerar classes com variantes de tamanho
+///
+/// @requires {function} f.get-size - Função para obter o tamanho baseado no índice
+///
+/// @param {string} property - Propriedade CSS a ser aplicada
+/// @param {number} num-start - Número inicial do range (padrão: 1)
+/// @param {number} num-end - Número final do range (padrão: 16)
+///
+/// @example scss - @include variant-class-generator('margin', 1, 16);
+///
+/// @output scss - .margin-none { margin: 0; } .margin-1 { margin: var(--1); } .margin-2 { margin: var(--2); } ...
+@mixin variant-class-generator($property, $num-start: 1, $num-end) {
+	&-none {
+		#{$property}: 0;
+	}
+	@for $i from $num-start through $num-end {
+		$var-name: f.get-size($i, 'name');
+		&-#{$var-name} {
+			#{$property}: var(--#{$var-name});
+		}
+	}
+}
+
+/// Mixin for generating classes with custom names based on a CSS property
+///
+/// @param {string} $name - Name to be used in the class
+/// @param {string} $property - CSS property to be used
+/// @param {list} $values - List of values to be generated
+///
+/// @example scss - @include property-name('size', 'width', '100px', '200px');
+///
+/// @output Custom CSS classes for the specified property
+@mixin property-name($name, $property, $values...) {
+	@each $value in $values {
+		&-#{$name}-#{$value} {
+			#{$property}: $value;
+		}
+	}
+}
+
+/// Mixin for generating classes with specific range of sizes
+///
+/// @requires {function} f.get-size - Function to get the size based on the index
+///
+/// @param {string} property - CSS property to be applied
+/// @param {number} num-start - Starting number of the range (default: 1)
+/// @param {number} num-end - Ending number of the range (default: 16)
+///
+/// @example scss - @include class-specific-range('padding', 1, 16);
+///
+/// @output scss - .padding-1 { padding: var(--1); } .padding-2 { padding: var(--2); } .padding-3 { padding: var(--3); } ...
+@mixin class-specific-range($property, $num-start: 1, $num-end: 16) {
+	@for $i from $num-start through $num-end {
+		$var-name: f.get-size($i, 'name');
+		&-#{$i},
+		&-#{$var-name} {
+			#{$property}: var(--#{$var-name});
+		}
+	}
+}
+
+/// Mixin for generating classes with a specific property set to 'none'
+///
+/// @param {string} property - CSS property to be set to 'none'
+///
+/// @example scss - @include class-none('display');
+///
+/// @output scss - .display-none { display: none; }
+@mixin class-none($property) {
+	&-none {
+		#{$property}: none;
+	}
+}
+
+/// ---- Responsives ----
+/// Mixin for creating media queries for screens smaller than the specified breakpoint
+///
+/// @require {function} f.get-breakpoint - Function to get the breakpoint value
+///
+/// @param {string} breakpoint - Name of the breakpoint to be used
+///
+/// @example scss - @include media-down('md') { ... }
+///
+/// @output Media query for screens smaller than the specified breakpoint
+@mixin media-down($breakpoint) {
+	@media (max-width: f.get-breakpoint($breakpoint)) {
+		@content;
+	}
+}
+
+/// Shortcut mixin for mobile devices (smaller than 'lg' breakpoint)
+///
+/// @require {mixin} media-down - Mixin for media queries
+///
+/// @example scss - @include media-mobile { ... }
+///
+/// @output Media query for mobile devices
+@mixin media-mobile {
+	@include media-down('lg') {
+		@content;
+	}
+}
+
+/// Mixin for creating responsive classes with optional prefixes
+///
+/// @require {variable} prefix.$prefix - Global prefix variable
+///
+/// @param {boolean} $prefix-check - Flag to check if prefix should be used
+/// @param {string} $breakpoint - Breakpoint name for the responsive class
+/// @param {string} $class - Name of the class to be generated
+///
+/// @example scss - @include responsive-class(true, 'md', 'text-center') { ... }
+///
+/// @output Responsive CSS class with optional prefix
+@mixin responsive-class($prefix-check, $breakpoint, $class) {
+	@if $prefix-check == true and prefix.$prefix != '' {
+		@if $breakpoint == '2xl' {
+			.\32xl\:#{prefix.$prefix}-#{$class} {
+				@content;
+			}
+		} @else {
+			.#{$breakpoint}\:#{prefix.$prefix}-#{$class} {
+				@content;
+			}
+		}
+	} @else {
+		@if $breakpoint == '2xl' {
+			.\32xl\:#{$class} {
+				@content;
+			}
+		} @else {
+			.#{$breakpoint}\:#{$class} {
+				@content;
+			}
+		}
+	}
+}
+
+/// --- Utilities ----
+
+/// Mixin para gerar classes de flexbox
+///
+/// @example scss - @include property;
+///
+/// @output scss - .ds-flex { display: flex; } .ds-flex-start { display: flex; justify-content: flex-start; align-items: flex-start; }...
+@mixin display-flex {
+	&-flex {
+		display: flex;
+
+		&-start {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-end {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+
+	&-inline-flex {
+		display: inline-flex;
+
+		&-center {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+/// Mixin para gerar classes de grid
+///
+/// @example scss - @include property;
+///
+/// @output scss - .ds-grid { display: grid; } .ds-inline-grid { display: inline-grid; }
+@mixin display-grid {
+	&-grid {
+		display: grid;
+	}
+
+	&-inline-grid {
+		display: inline-grid;
+	}
+}

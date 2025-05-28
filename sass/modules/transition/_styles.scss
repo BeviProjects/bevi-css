@@ -1,0 +1,18 @@
+@use 'mixins' as m;
+
+.duration {
+	@include m.duration(fast);
+	@include m.duration(normal);
+	@include m.duration(slow);
+}
+
+.property {
+	@include m.property;
+}
+
+.ease {
+	@include m.timing-function(linear);
+	@include m.timing-function(in);
+	@include m.timing-function(in-out);
+	@include m.timing-function(out);
+}

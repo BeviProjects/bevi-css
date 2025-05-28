@@ -1,0 +1,60 @@
+@use 'mixin' as m;
+
+:where(button, .btn, input, textarea, select),
+input[type='file']::file-selector-button {
+	@include m.form;
+}
+
+:where(
+	input[type='text'],
+	input[type='password'],
+	input[type='email'],
+	input[type='tel'],
+	input[type='search'],
+	input[type='number'],
+	input[type='date'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	select,
+	textarea
+) {
+	@include m.input-text;
+}
+
+input[type='file'] {
+	@include m.input-file;
+}
+
+:where(button, .btn, input[type='button'], input[type='submit'], input[type='reset']),
+input[type='file']::file-selector-button {
+	@include m.button;
+}
+
+a {
+	@include m.link;
+}
+
+:where(.btn) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: var(--btn-color);
+}
+
+:where(input[type='checkbox'], input[type='radio']) {
+	@include m.checkbox-radio;
+}
+
+input[type='checkbox'] {
+	@include m.checkbox;
+}
+
+input[type='radio'] {
+	@include m.radio;
+}
+
+input[type='checkbox'].switch,
+input[type='radio'].switch {
+	@include m.switch;
+}

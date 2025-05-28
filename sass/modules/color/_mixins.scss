@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use '../../abstracts/mixins' as mixin;
+@use 'variables' as v;
+
+@mixin var-color-generator {
+	@each $key, $value in v.$colors {
+		$h: map.get($value, 'h');
+		$s: map.get($value, 's');
+		$l: map.get($value, 'l');
+
+		--#{$key}-base: #{$h, $s + '%'};
+
+		@each $l-value in $l {
+			--#{$key}-#{$l-value}-base: #{$h, $s + '%', $l-value + '%'};
+		}
+
+		@each $l-value in $l {
+			--#{$key}-#{$l-value}: hsl(var(--#{$key}-#{$l-value}-base));
+		}
+	}
+}
+
+@mixin class-generator-variants($property, $hovering: false) {
+	@each $key, $value in v.$colors {
+		$l: map.get($value, 'l');
+
+		@each $l-value in $l {
+			@if ($hovering) {
+				&-#{$key}-#{$l-value}:hover {
+					#{$property}: var(--#{$key}-#{$l-value});
+				}
+			} @else {
+				&-#{$key}-#{$l-value} {
+					#{$property}: var(--#{$key}-#{$l-value});
+				}
+			}
+		}
+	}
+}
+
+@mixin class-generator($property, $name: $property, $hovering: false) {
+	@if ($hovering) {
+		.hover {
+			&\:#{$name} {
+				@include class-generator-variants($property, $hovering);
+			}
+		}
+	} @else {
+		.#{$name} {
+			@include class-generator-variants($property, $hovering);
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'color') {
+		@include class-generator-variants('color');
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'bg') {
+		@include class-generator-variants('background-color');
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'color') {
+		@include class-generator-variants('color', true);
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'bg') {
+		@include class-generator-variants('background-color', true);
+	}
+}

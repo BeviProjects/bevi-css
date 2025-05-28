@@ -1,0 +1,121 @@
+@mixin variables {
+	// Geral
+	--form-highlight: hsl(220, 90%, 60%);
+	--form-highlight-active: hsla(220, 90%, 60%, 0.32);
+	--form-link-active: hsl(220, 90%, 40%);
+
+	// Inputs
+	// background
+	--input-background: var(--gray-95);
+
+	// color
+	--input-color: var(--violet-40);
+
+	// outline
+	--input-outline-color: transparent;
+	--input-outline-width: 4px;
+
+	// border
+	--input-border-color: transparent;
+	--input-border-width: 0.125rem;
+
+	// Hover
+	--input-outline-color-hover: rgba(120, 122, 186, 0.32);
+
+	// Focus
+	--input-border-color-focus: var(--violet-80);
+
+	// Active
+	--input-border-color-active: var(--violet-40);
+
+	// Buttons
+	// background
+	--btn-background: var(--gray-95);
+
+	// color
+	--btn-color: var(--violet-40);
+
+	// outline
+	--btn-outline-color: transparent;
+	--btn-outline-width: 0.25rem;
+
+	// border
+	--btn-border-color: transparent;
+	--btn-border-width: 0.125rem;
+
+	// Hover
+	--btn-outline-color-hover: var(--gray-80);
+
+	// Focus
+	--btn-border-color-focus: var(--violet-80);
+
+	// Active
+	--btn-outline-color-active: transparent;
+	--btn-background-active: var(--gray-100);
+
+	// Link
+	--link-color: var(--violet-20);
+	--link-color-hover: var(--link-color);
+
+	// Checkbox
+	--cbx-border-color: var(--gray-80);
+	--cbx-outline-color: transparent;
+	--cbx-background-color: transparent;
+	--cbx-icon: transparent;
+
+	// Hover
+	--cbx-border-color-hover: var(--violet-60);
+	--cbx-outline-color-hover: rgba(120, 122, 186, 0.32);
+	--cbx-icon-hover: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.55003 14.6695L17.7708 6.44905C18.0366 6.18305 18.3499 6.05005 18.7108 6.05005C19.0718 6.05005 19.3852 6.18305 19.651 6.44905C19.917 6.71488 20.05 7.03005 20.05 7.39455C20.05 7.75905 19.917 8.0743 19.651 8.3403L10.4903 17.512C10.2243 17.778 9.91087 17.911 9.55003 17.911C9.1892 17.911 8.87578 17.778 8.60978 17.512L4.33803 13.2403C4.07203 12.9743 3.94087 12.659 3.94453 12.2945C3.9482 11.93 4.08303 11.6149 4.34903 11.349C4.61487 11.083 4.93003 10.95 5.29453 10.95C5.65903 10.95 5.97428 11.083 6.24028 11.349L9.55003 14.6695Z" fill="%23BCBDDC"/></svg>');
+
+	// Checked
+	--cbx-border-color-checked: var(--violet-40);
+	--cbx-outline-color-checked: rgba(120, 122, 186, 0.32);
+	--cbx-background-color-checked: var(--violet-40);
+	--cbx-icon-checked: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.55003 14.6695L17.7708 6.44905C18.0366 6.18305 18.3499 6.05005 18.7108 6.05005C19.0718 6.05005 19.3852 6.18305 19.651 6.44905C19.917 6.71488 20.05 7.03005 20.05 7.39455C20.05 7.75905 19.917 8.0743 19.651 8.3403L10.4903 17.512C10.2243 17.778 9.91087 17.911 9.55003 17.911C9.1892 17.911 8.87578 17.778 8.60978 17.512L4.33803 13.2403C4.07203 12.9743 3.94087 12.659 3.94453 12.2945C3.9482 11.93 4.08303 11.6149 4.34903 11.349C4.61487 11.083 4.93003 10.95 5.29453 10.95C5.65903 10.95 5.97428 11.083 6.24028 11.349L9.55003 14.6695Z" fill="%239CF64B"/></svg>');
+
+	// Checked Hover
+	--cbx-border-color-checked-hover: var(--gray-80);
+	--cbx-background-color-checked-hover: var(--gray-80);
+	--cbx-icon-checked-hover: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.55003 14.6695L17.7708 6.44905C18.0366 6.18305 18.3499 6.05005 18.7108 6.05005C19.0718 6.05005 19.3852 6.18305 19.651 6.44905C19.917 6.71488 20.05 7.03005 20.05 7.39455C20.05 7.75905 19.917 8.0743 19.651 8.3403L10.4903 17.512C10.2243 17.778 9.91087 17.911 9.55003 17.911C9.1892 17.911 8.87578 17.778 8.60978 17.512L4.33803 13.2403C4.07203 12.9743 3.94087 12.659 3.94453 12.2945C3.9482 11.93 4.08303 11.6149 4.34903 11.349C4.61487 11.083 4.93003 10.95 5.29453 10.95C5.65903 10.95 5.97428 11.083 6.24028 11.349L9.55003 14.6695Z" fill="white"/></svg>');
+
+	// Checked Disabled
+	--cbx-border-color-disabled: var(--gray-80);
+	--cbx-background-color-disabled: var(--gray-80);
+
+	// Radius
+	--rad-border-color: var(--gray-80);
+	--rad-outline-color: transparent;
+	--rad-background-color: transparent;
+	--rad-icon: var(--violet-80);
+
+	// Hover
+	--rad-border-color-hover: var(--violet-60);
+	--rad-outline-color-hover: rgba(120, 122, 186, 0.32);
+
+	// Checked
+	--rad-border-color-checked: var(--violet-40);
+	--rad-outline-color-checked: transparent;
+	--rad-icon-checked: var(--violet-40);
+
+	// Disabled
+	--rad-border-color-disabled: var(--gray-80);
+
+	// Switch
+	--swt-border-color: transparent;
+	--swt-outline-color: transparent;
+	--swt-background-color: var(--violet-80);
+	--swt-icon: var(--gray-100);
+
+	--swt-outline-color-hover: rgba(120, 122, 186, 0.32);
+
+	--swt-background-color-checked: var(--ciano-50);
+	--swt-border-color-checked: transparent;
+
+	--swt-border-color-disabled: transparent;
+	--swt-icon-disabled: rgba(255, 255, 255, 0.48);
+	--swt-background-color-disabled: var(--gray-95);
+
+	--swt-border-color-checked-disabled: transparent;
+	--swt-background-color-checked-disabled: hsla(185, 72%, 50%, 0.16);
+}

@@ -1,0 +1,61 @@
+@use 'mixins' as m;
+
+.all {
+	@include m.all;
+}
+
+.aspect-ratio {
+	@include m.aspect-ratio;
+}
+
+.container-type {
+	@include m.container-type;
+}
+
+.cursor {
+	@include m.cursor;
+}
+
+.ds {
+	@include m.display;
+}
+
+.flex-bgs {
+	@include m.flex-bgs;
+}
+
+.list-style {
+	@include m.list-style;
+}
+
+.object {
+	@include m.object-fit;
+}
+
+.ovf {
+	@include m.overflow;
+}
+
+.shadow {
+	@include m.shadow;
+}
+
+.w {
+	@include m.width;
+}
+
+.h {
+	@include m.height;
+}
+
+.visibility {
+	@include m.visibility;
+}
+
+.white-space {
+	@include m.white-space;
+}
+
+.z-index {
+	@include m.z-index;
+}

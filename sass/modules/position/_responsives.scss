@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '../../abstracts' as abstract;
+@use 'mixins' as m;
+
+//#region Responsive
+// Gera todos os media query com os prefixos responsivos
+
+@each $breakpoint in map.keys(abstract.$breakpoints) {
+	@include abstract.media-down($breakpoint) {
+		@include m.responsive($breakpoint);
+	}
+}
+//#endregion

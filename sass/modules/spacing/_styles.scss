@@ -1,0 +1,21 @@
+@use 'mixins' as m;
+
+.p {
+	@include m.space-primitive(padding);
+	@include m.space-simple(t, padding-top);
+	@include m.space-simple(r, padding-right);
+	@include m.space-simple(b, padding-bottom);
+	@include m.space-simple(l, padding-left);
+	@include m.space-complex(block, padding-block);
+	@include m.space-complex(inline, padding-inline);
+}
+
+.m {
+	@include m.space-primitive(margin);
+	@include m.space-simple(t, margin-top);
+	@include m.space-simple(r, margin-right);
+	@include m.space-simple(b, margin-bottom);
+	@include m.space-simple(l, margin-left);
+	@include m.space-complex(block, margin-block);
+	@include m.space-complex(inline, margin-inline);
+}

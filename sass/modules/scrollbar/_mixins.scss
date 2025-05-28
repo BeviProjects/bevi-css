@@ -1,0 +1,54 @@
+@use '../../utilities/prefix' as prefix;
+
+@mixin hide-scrollbar {
+	.hide-scrollbar {
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			border: none;
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: 0;
+			background-color: transparent;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@mixin scrollbar {
+	@include prefix.prefix('scrollbar') {
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: var(--bv-scrollbar-size);
+			height: var(--bv-scrollbar-size);
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			border: 0;
+			background-color: var(--bv-scrollbar-background);
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: 2px solid var(--bv-scrollbar-background);
+			border-radius: var(--bv-scrollbar-radius);
+			background-color: var(--bv-scrollbar-color);
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background-color: var(--bv-scrollbar-color-hover);
+		}
+	}
+}

@@ -1,0 +1,108 @@
+@use 'sass:math';
+@use '../../abstracts/mixins' as mixin;
+@use '../../utilities/prefix' as prefix;
+
+@mixin container-default {
+	position: relative;
+	padding: 0 4rem;
+	margin: 0 auto;
+}
+
+@mixin container {
+	&-sm,
+	&-md,
+	&-lg,
+	&-full {
+		@include container-default;
+	}
+
+	&-sm {
+		width: min(var(--container-sm), 100%);
+	}
+
+	&-md {
+		width: min(var(--container-md), 100%);
+	}
+
+	&-lg {
+		width: min(var(--container-lg), 100%);
+	}
+
+	&-full {
+		width: 100%;
+		max-width: var(--container-full);
+	}
+}
+
+@mixin container-responsive {
+	@include prefix.prefix('container') {
+		&-sm,
+		&-md,
+		&-lg,
+		&-full {
+			padding: 0 1.25rem;
+		}
+	}
+}
+
+@mixin row {
+	width: 100%;
+	display: flex;
+	flex-flow: wrap row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+@mixin row-responsive {
+	@include prefix.prefix('row') {
+		flex-flow: wrap column;
+	}
+}
+
+@mixin col {
+	display: block;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+
+	@for $i from 0 through 12 {
+		&.col-#{$i} {
+			flex: none;
+			width: #{math.div($i, 12) * 100%};
+		}
+	}
+}
+
+@mixin col-responsive {
+	$classes: '';
+
+	@for $i from 0 through 12 {
+		@if $i == 0 {
+			@if prefix.$prefix == '' {
+				$classes: '.col-#{$i}';
+			} @else {
+				$classes: '.#{prefix.$prefix}-col-#{$i}';
+			}
+		} @else {
+			@if prefix.$prefix == '' {
+				$classes: '#{$classes}, .col-#{$i}';
+			} @else {
+				$classes: '#{$classes}, .#{prefix.$prefix}-col-#{$i}';
+			}
+		}
+	}
+
+	:where(#{$classes}) {
+		flex: none;
+		width: 100%;
+	}
+}
+
+@mixin mobile {
+	@include mixin.media-mobile {
+		@include container-responsive;
+		@include row-responsive;
+		@include col-responsive;
+	}
+}

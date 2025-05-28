@@ -1,0 +1,62 @@
+@use 'mixins' as m;
+
+@include m.base;
+
+:where(
+	h1,
+	.h1,
+	.heading-1,
+	h2,
+	.h2,
+	.heading-2,
+	h3,
+	.h3,
+	.heading-3,
+	h4,
+	.h4,
+	.heading-4,
+	h5,
+	.h5,
+	.heading-5,
+	h6,
+	.h6,
+	.heading-6
+) {
+	@include m.base-titles(heading);
+}
+
+.h {
+	@include m.heading;
+}
+
+:where(.display-xl, .display-lg, .display-md, .display-sm, .display-xs) {
+	@include m.base-titles(display);
+}
+
+.display {
+	@include m.display;
+}
+
+:where(.title-lg, .title-md, .title-sm, .title-xs, .title-2xs, .title-3xs) {
+	@include m.base-titles(title);
+}
+
+.title {
+	@include m.title;
+}
+
+.font {
+	@include m.font-size;
+	@include m.font-style;
+	@include m.font-weight;
+}
+
+.text {
+	@include m.text-align;
+	@include m.text-decoration;
+	@include m.text-transform;
+}
+
+.line-height {
+	@include m.line-height;
+}

@@ -1,0 +1,15 @@
+@use '../../abstracts/mixins' as mixin;
+@use '../../abstracts/functions' as function;
+
+@mixin style {
+	@include mixin.property(border-style, none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset);
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'radius') {
+		@include mixin.variant-class-generator('border-radius', 1, 11);
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'border') {
+		@include style;
+	}
+}

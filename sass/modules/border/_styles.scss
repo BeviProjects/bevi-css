@@ -1,0 +1,10 @@
+@use '../../abstracts/mixins' as mixin;
+@use 'mixins' as m;
+
+.radius {
+	@include mixin.variant-class-generator('border-radius', 1, 11);
+}
+
+.border {
+	@include m.style;
+}

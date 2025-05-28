@@ -1,0 +1,101 @@
+@use '../../abstracts' as abstract;
+
+@mixin flex-flow {
+	&-row {
+		&-wr {
+			flex-flow: row wrap;
+		}
+		&-nw {
+			flex-flow: row nowrap;
+		}
+		&-rev {
+			&-wr {
+				flex-flow: row-reverse wrap;
+			}
+			&-nw {
+				flex-flow: row-reverse nowrap;
+			}
+		}
+	}
+
+	&-col {
+		&-wr {
+			flex-flow: column wrap;
+		}
+		&-nw {
+			flex-flow: column nowrap;
+		}
+		&-rev {
+			&-wr {
+				flex-flow: column-reverse wrap;
+			}
+			&-nw {
+				flex-flow: column-reverse nowrap;
+			}
+		}
+	}
+}
+
+@mixin grid-flow {
+	&-flow {
+		&-row {
+			grid-auto-flow: row;
+		}
+		&-col {
+			grid-auto-flow: column;
+		}
+		&-dense {
+			grid-auto-flow: dense;
+		}
+	}
+}
+
+@mixin flex-alignment($property) {
+	&-start {
+		#{$property}: flex-start;
+	}
+	&-center {
+		#{$property}: center;
+	}
+	&-end {
+		#{$property}: flex-end;
+	}
+}
+
+@mixin justify-variants {
+	&-between {
+		justify-content: space-between;
+	}
+	&-around {
+		justify-content: space-around;
+	}
+	&-evenly {
+		justify-content: space-evenly;
+	}
+}
+
+@mixin align-variants {
+	&-stretch {
+		align-items: stretch;
+	}
+	&-baseline {
+		align-items: baseline;
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(false, $breakpoint, 'flow') {
+		@include flex-flow;
+	}
+	@include abstract.responsive-class(false, $breakpoint, 'grid') {
+		@include grid-flow;
+	}
+	@include abstract.responsive-class(false, $breakpoint, 'justify') {
+		@include flex-alignment(justify-content);
+		@include justify-variants;
+	}
+	@include abstract.responsive-class(false, $breakpoint, 'align') {
+		@include flex-alignment(align-items);
+		@include align-variants;
+	}
+}

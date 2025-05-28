@@ -1,0 +1,41 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin space-primitive($property) {
+	@include mixin.class-none($property);
+	@include mixin.class-specific-range($property);
+}
+
+@mixin space-simple($class, $property) {
+	&#{$class} {
+		@include mixin.class-none($property);
+		@include mixin.class-specific-range($property);
+	}
+}
+
+@mixin space-complex($class, $property) {
+	&-#{$class} {
+		@include mixin.class-none($property);
+		@include mixin.class-specific-range($property);
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'p') {
+		@include space-primitive(padding);
+		@include space-simple(t, padding-top);
+		@include space-simple(r, padding-right);
+		@include space-simple(b, padding-bottom);
+		@include space-simple(l, padding-left);
+		@include space-complex(block, padding-block);
+		@include space-complex(inline, padding-inline);
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'm') {
+		@include space-primitive(margin);
+		@include space-simple(t, margin-top);
+		@include space-simple(r, margin-right);
+		@include space-simple(b, margin-bottom);
+		@include space-simple(l, margin-left);
+		@include space-complex(block, margin-block);
+		@include space-complex(inline, margin-inline);
+	}
+}
