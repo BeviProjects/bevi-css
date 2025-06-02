@@ -1,0 +1,7 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'gap') {
+		@include mixin.variant-class-generator('gap', 1, 16);
+	}
+}

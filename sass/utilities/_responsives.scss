@@ -6,6 +6,7 @@
 @use '../modules/color/mixins' as color;
 @use '../modules/typography/mixins' as typography;
 @use '../modules/position/mixins' as postition;
+@use '../modules/gap/mixins' as gap;
 @use '../modules/alignment/mixins' as alignment;
 @use '../modules/spacing/mixins' as spacing;
 @use '../modules/border/mixins' as border;
@@ -16,6 +17,7 @@
 		@include color.responsive($breakpoint);
 		@include typography.responsive($breakpoint);
 		@include postition.responsive($breakpoint);
+		@include gap.responsive($breakpoint);
 		@include alignment.responsive($breakpoint);
 		@include spacing.responsive($breakpoint);
 		@include border.responsive($breakpoint);

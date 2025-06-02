@@ -88,12 +88,15 @@
 /// @example scss - @include variant-class-generator('margin', 1, 16);
 ///
 /// @output scss - .margin-none { margin: 0; } .margin-1 { margin: var(--1); } .margin-2 { margin: var(--2); } ...
-@mixin variant-class-generator($property, $num-start: 1, $num-end) {
+@mixin variant-class-generator($property, $num-start: 1, $num-end: 16) {
+	&-0,
 	&-none {
 		#{$property}: 0;
 	}
 	@for $i from $num-start through $num-end {
+		$var-id: f.get-size($i, 'id');
 		$var-name: f.get-size($i, 'name');
+		&-#{$var-id},
 		&-#{$var-name} {
 			#{$property}: var(--#{$var-name});
 		}

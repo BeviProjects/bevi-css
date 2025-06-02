@@ -1537,6 +1537,58 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   inset: 0;
 }
 
+.gap-0, .gap-none {
+  gap: 0;
+}
+.gap-1, .gap-6xs {
+  gap: var(--6xs);
+}
+.gap-2, .gap-5xs {
+  gap: var(--5xs);
+}
+.gap-3, .gap-4xs {
+  gap: var(--4xs);
+}
+.gap-4, .gap-3xs {
+  gap: var(--3xs);
+}
+.gap-5, .gap-2xs {
+  gap: var(--2xs);
+}
+.gap-6, .gap-xs {
+  gap: var(--xs);
+}
+.gap-7, .gap-sm {
+  gap: var(--sm);
+}
+.gap-8, .gap-md {
+  gap: var(--md);
+}
+.gap-9, .gap-lg {
+  gap: var(--lg);
+}
+.gap-10, .gap-xl {
+  gap: var(--xl);
+}
+.gap-11, .gap-2xl {
+  gap: var(--2xl);
+}
+.gap-12, .gap-3xl {
+  gap: var(--3xl);
+}
+.gap-13, .gap-4xl {
+  gap: var(--4xl);
+}
+.gap-14, .gap-5xl {
+  gap: var(--5xl);
+}
+.gap-15, .gap-6xl {
+  gap: var(--6xl);
+}
+.gap-16, .gap-7xl {
+  gap: var(--7xl);
+}
+
 .flow-row-wr {
   flex-flow: row wrap;
 }
@@ -2323,40 +2375,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   margin-inline: var(--7xl);
 }
 
-.radius-none {
+.radius-0, .radius-none {
   border-radius: 0;
 }
-.radius-6xs {
+.radius-1, .radius-6xs {
   border-radius: var(--6xs);
 }
-.radius-5xs {
+.radius-2, .radius-5xs {
   border-radius: var(--5xs);
 }
-.radius-4xs {
+.radius-3, .radius-4xs {
   border-radius: var(--4xs);
 }
-.radius-3xs {
+.radius-4, .radius-3xs {
   border-radius: var(--3xs);
 }
-.radius-2xs {
+.radius-5, .radius-2xs {
   border-radius: var(--2xs);
 }
-.radius-xs {
+.radius-6, .radius-xs {
   border-radius: var(--xs);
 }
-.radius-sm {
+.radius-7, .radius-sm {
   border-radius: var(--sm);
 }
-.radius-md {
+.radius-8, .radius-md {
   border-radius: var(--md);
 }
-.radius-lg {
+.radius-9, .radius-lg {
   border-radius: var(--lg);
 }
-.radius-xl {
+.radius-10, .radius-xl {
   border-radius: var(--xl);
 }
-.radius-2xl {
+.radius-11, .radius-2xl {
   border-radius: var(--2xl);
 }
 
@@ -3141,6 +3193,57 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .\32 xl\:inset-0 {
     inset: 0;
   }
+  .\32 xl\:gap-0, .\32 xl\:gap-none {
+    gap: 0;
+  }
+  .\32 xl\:gap-1, .\32 xl\:gap-6xs {
+    gap: var(--6xs);
+  }
+  .\32 xl\:gap-2, .\32 xl\:gap-5xs {
+    gap: var(--5xs);
+  }
+  .\32 xl\:gap-3, .\32 xl\:gap-4xs {
+    gap: var(--4xs);
+  }
+  .\32 xl\:gap-4, .\32 xl\:gap-3xs {
+    gap: var(--3xs);
+  }
+  .\32 xl\:gap-5, .\32 xl\:gap-2xs {
+    gap: var(--2xs);
+  }
+  .\32 xl\:gap-6, .\32 xl\:gap-xs {
+    gap: var(--xs);
+  }
+  .\32 xl\:gap-7, .\32 xl\:gap-sm {
+    gap: var(--sm);
+  }
+  .\32 xl\:gap-8, .\32 xl\:gap-md {
+    gap: var(--md);
+  }
+  .\32 xl\:gap-9, .\32 xl\:gap-lg {
+    gap: var(--lg);
+  }
+  .\32 xl\:gap-10, .\32 xl\:gap-xl {
+    gap: var(--xl);
+  }
+  .\32 xl\:gap-11, .\32 xl\:gap-2xl {
+    gap: var(--2xl);
+  }
+  .\32 xl\:gap-12, .\32 xl\:gap-3xl {
+    gap: var(--3xl);
+  }
+  .\32 xl\:gap-13, .\32 xl\:gap-4xl {
+    gap: var(--4xl);
+  }
+  .\32 xl\:gap-14, .\32 xl\:gap-5xl {
+    gap: var(--5xl);
+  }
+  .\32 xl\:gap-15, .\32 xl\:gap-6xl {
+    gap: var(--6xl);
+  }
+  .\32 xl\:gap-16, .\32 xl\:gap-7xl {
+    gap: var(--7xl);
+  }
   .\32 xl\:flow-row-wr {
     flex-flow: row wrap;
   }
@@ -3921,40 +4024,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .\32 xl\:m-inline-16, .\32 xl\:m-inline-7xl {
     margin-inline: var(--7xl);
   }
-  .\32 xl\:radius-none {
+  .\32 xl\:radius-0, .\32 xl\:radius-none {
     border-radius: 0;
   }
-  .\32 xl\:radius-6xs {
+  .\32 xl\:radius-1, .\32 xl\:radius-6xs {
     border-radius: var(--6xs);
   }
-  .\32 xl\:radius-5xs {
+  .\32 xl\:radius-2, .\32 xl\:radius-5xs {
     border-radius: var(--5xs);
   }
-  .\32 xl\:radius-4xs {
+  .\32 xl\:radius-3, .\32 xl\:radius-4xs {
     border-radius: var(--4xs);
   }
-  .\32 xl\:radius-3xs {
+  .\32 xl\:radius-4, .\32 xl\:radius-3xs {
     border-radius: var(--3xs);
   }
-  .\32 xl\:radius-2xs {
+  .\32 xl\:radius-5, .\32 xl\:radius-2xs {
     border-radius: var(--2xs);
   }
-  .\32 xl\:radius-xs {
+  .\32 xl\:radius-6, .\32 xl\:radius-xs {
     border-radius: var(--xs);
   }
-  .\32 xl\:radius-sm {
+  .\32 xl\:radius-7, .\32 xl\:radius-sm {
     border-radius: var(--sm);
   }
-  .\32 xl\:radius-md {
+  .\32 xl\:radius-8, .\32 xl\:radius-md {
     border-radius: var(--md);
   }
-  .\32 xl\:radius-lg {
+  .\32 xl\:radius-9, .\32 xl\:radius-lg {
     border-radius: var(--lg);
   }
-  .\32 xl\:radius-xl {
+  .\32 xl\:radius-10, .\32 xl\:radius-xl {
     border-radius: var(--xl);
   }
-  .\32 xl\:radius-2xl {
+  .\32 xl\:radius-11, .\32 xl\:radius-2xl {
     border-radius: var(--2xl);
   }
   .\32 xl\:border-none {
@@ -4695,6 +4798,57 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   }
   .xl\:inset-0 {
     inset: 0;
+  }
+  .xl\:gap-0, .xl\:gap-none {
+    gap: 0;
+  }
+  .xl\:gap-1, .xl\:gap-6xs {
+    gap: var(--6xs);
+  }
+  .xl\:gap-2, .xl\:gap-5xs {
+    gap: var(--5xs);
+  }
+  .xl\:gap-3, .xl\:gap-4xs {
+    gap: var(--4xs);
+  }
+  .xl\:gap-4, .xl\:gap-3xs {
+    gap: var(--3xs);
+  }
+  .xl\:gap-5, .xl\:gap-2xs {
+    gap: var(--2xs);
+  }
+  .xl\:gap-6, .xl\:gap-xs {
+    gap: var(--xs);
+  }
+  .xl\:gap-7, .xl\:gap-sm {
+    gap: var(--sm);
+  }
+  .xl\:gap-8, .xl\:gap-md {
+    gap: var(--md);
+  }
+  .xl\:gap-9, .xl\:gap-lg {
+    gap: var(--lg);
+  }
+  .xl\:gap-10, .xl\:gap-xl {
+    gap: var(--xl);
+  }
+  .xl\:gap-11, .xl\:gap-2xl {
+    gap: var(--2xl);
+  }
+  .xl\:gap-12, .xl\:gap-3xl {
+    gap: var(--3xl);
+  }
+  .xl\:gap-13, .xl\:gap-4xl {
+    gap: var(--4xl);
+  }
+  .xl\:gap-14, .xl\:gap-5xl {
+    gap: var(--5xl);
+  }
+  .xl\:gap-15, .xl\:gap-6xl {
+    gap: var(--6xl);
+  }
+  .xl\:gap-16, .xl\:gap-7xl {
+    gap: var(--7xl);
   }
   .xl\:flow-row-wr {
     flex-flow: row wrap;
@@ -5476,40 +5630,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .xl\:m-inline-16, .xl\:m-inline-7xl {
     margin-inline: var(--7xl);
   }
-  .xl\:radius-none {
+  .xl\:radius-0, .xl\:radius-none {
     border-radius: 0;
   }
-  .xl\:radius-6xs {
+  .xl\:radius-1, .xl\:radius-6xs {
     border-radius: var(--6xs);
   }
-  .xl\:radius-5xs {
+  .xl\:radius-2, .xl\:radius-5xs {
     border-radius: var(--5xs);
   }
-  .xl\:radius-4xs {
+  .xl\:radius-3, .xl\:radius-4xs {
     border-radius: var(--4xs);
   }
-  .xl\:radius-3xs {
+  .xl\:radius-4, .xl\:radius-3xs {
     border-radius: var(--3xs);
   }
-  .xl\:radius-2xs {
+  .xl\:radius-5, .xl\:radius-2xs {
     border-radius: var(--2xs);
   }
-  .xl\:radius-xs {
+  .xl\:radius-6, .xl\:radius-xs {
     border-radius: var(--xs);
   }
-  .xl\:radius-sm {
+  .xl\:radius-7, .xl\:radius-sm {
     border-radius: var(--sm);
   }
-  .xl\:radius-md {
+  .xl\:radius-8, .xl\:radius-md {
     border-radius: var(--md);
   }
-  .xl\:radius-lg {
+  .xl\:radius-9, .xl\:radius-lg {
     border-radius: var(--lg);
   }
-  .xl\:radius-xl {
+  .xl\:radius-10, .xl\:radius-xl {
     border-radius: var(--xl);
   }
-  .xl\:radius-2xl {
+  .xl\:radius-11, .xl\:radius-2xl {
     border-radius: var(--2xl);
   }
   .xl\:border-none {
@@ -6250,6 +6404,57 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   }
   .lg\:inset-0 {
     inset: 0;
+  }
+  .lg\:gap-0, .lg\:gap-none {
+    gap: 0;
+  }
+  .lg\:gap-1, .lg\:gap-6xs {
+    gap: var(--6xs);
+  }
+  .lg\:gap-2, .lg\:gap-5xs {
+    gap: var(--5xs);
+  }
+  .lg\:gap-3, .lg\:gap-4xs {
+    gap: var(--4xs);
+  }
+  .lg\:gap-4, .lg\:gap-3xs {
+    gap: var(--3xs);
+  }
+  .lg\:gap-5, .lg\:gap-2xs {
+    gap: var(--2xs);
+  }
+  .lg\:gap-6, .lg\:gap-xs {
+    gap: var(--xs);
+  }
+  .lg\:gap-7, .lg\:gap-sm {
+    gap: var(--sm);
+  }
+  .lg\:gap-8, .lg\:gap-md {
+    gap: var(--md);
+  }
+  .lg\:gap-9, .lg\:gap-lg {
+    gap: var(--lg);
+  }
+  .lg\:gap-10, .lg\:gap-xl {
+    gap: var(--xl);
+  }
+  .lg\:gap-11, .lg\:gap-2xl {
+    gap: var(--2xl);
+  }
+  .lg\:gap-12, .lg\:gap-3xl {
+    gap: var(--3xl);
+  }
+  .lg\:gap-13, .lg\:gap-4xl {
+    gap: var(--4xl);
+  }
+  .lg\:gap-14, .lg\:gap-5xl {
+    gap: var(--5xl);
+  }
+  .lg\:gap-15, .lg\:gap-6xl {
+    gap: var(--6xl);
+  }
+  .lg\:gap-16, .lg\:gap-7xl {
+    gap: var(--7xl);
   }
   .lg\:flow-row-wr {
     flex-flow: row wrap;
@@ -7031,40 +7236,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .lg\:m-inline-16, .lg\:m-inline-7xl {
     margin-inline: var(--7xl);
   }
-  .lg\:radius-none {
+  .lg\:radius-0, .lg\:radius-none {
     border-radius: 0;
   }
-  .lg\:radius-6xs {
+  .lg\:radius-1, .lg\:radius-6xs {
     border-radius: var(--6xs);
   }
-  .lg\:radius-5xs {
+  .lg\:radius-2, .lg\:radius-5xs {
     border-radius: var(--5xs);
   }
-  .lg\:radius-4xs {
+  .lg\:radius-3, .lg\:radius-4xs {
     border-radius: var(--4xs);
   }
-  .lg\:radius-3xs {
+  .lg\:radius-4, .lg\:radius-3xs {
     border-radius: var(--3xs);
   }
-  .lg\:radius-2xs {
+  .lg\:radius-5, .lg\:radius-2xs {
     border-radius: var(--2xs);
   }
-  .lg\:radius-xs {
+  .lg\:radius-6, .lg\:radius-xs {
     border-radius: var(--xs);
   }
-  .lg\:radius-sm {
+  .lg\:radius-7, .lg\:radius-sm {
     border-radius: var(--sm);
   }
-  .lg\:radius-md {
+  .lg\:radius-8, .lg\:radius-md {
     border-radius: var(--md);
   }
-  .lg\:radius-lg {
+  .lg\:radius-9, .lg\:radius-lg {
     border-radius: var(--lg);
   }
-  .lg\:radius-xl {
+  .lg\:radius-10, .lg\:radius-xl {
     border-radius: var(--xl);
   }
-  .lg\:radius-2xl {
+  .lg\:radius-11, .lg\:radius-2xl {
     border-radius: var(--2xl);
   }
   .lg\:border-none {
@@ -7805,6 +8010,57 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   }
   .md\:inset-0 {
     inset: 0;
+  }
+  .md\:gap-0, .md\:gap-none {
+    gap: 0;
+  }
+  .md\:gap-1, .md\:gap-6xs {
+    gap: var(--6xs);
+  }
+  .md\:gap-2, .md\:gap-5xs {
+    gap: var(--5xs);
+  }
+  .md\:gap-3, .md\:gap-4xs {
+    gap: var(--4xs);
+  }
+  .md\:gap-4, .md\:gap-3xs {
+    gap: var(--3xs);
+  }
+  .md\:gap-5, .md\:gap-2xs {
+    gap: var(--2xs);
+  }
+  .md\:gap-6, .md\:gap-xs {
+    gap: var(--xs);
+  }
+  .md\:gap-7, .md\:gap-sm {
+    gap: var(--sm);
+  }
+  .md\:gap-8, .md\:gap-md {
+    gap: var(--md);
+  }
+  .md\:gap-9, .md\:gap-lg {
+    gap: var(--lg);
+  }
+  .md\:gap-10, .md\:gap-xl {
+    gap: var(--xl);
+  }
+  .md\:gap-11, .md\:gap-2xl {
+    gap: var(--2xl);
+  }
+  .md\:gap-12, .md\:gap-3xl {
+    gap: var(--3xl);
+  }
+  .md\:gap-13, .md\:gap-4xl {
+    gap: var(--4xl);
+  }
+  .md\:gap-14, .md\:gap-5xl {
+    gap: var(--5xl);
+  }
+  .md\:gap-15, .md\:gap-6xl {
+    gap: var(--6xl);
+  }
+  .md\:gap-16, .md\:gap-7xl {
+    gap: var(--7xl);
   }
   .md\:flow-row-wr {
     flex-flow: row wrap;
@@ -8586,40 +8842,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .md\:m-inline-16, .md\:m-inline-7xl {
     margin-inline: var(--7xl);
   }
-  .md\:radius-none {
+  .md\:radius-0, .md\:radius-none {
     border-radius: 0;
   }
-  .md\:radius-6xs {
+  .md\:radius-1, .md\:radius-6xs {
     border-radius: var(--6xs);
   }
-  .md\:radius-5xs {
+  .md\:radius-2, .md\:radius-5xs {
     border-radius: var(--5xs);
   }
-  .md\:radius-4xs {
+  .md\:radius-3, .md\:radius-4xs {
     border-radius: var(--4xs);
   }
-  .md\:radius-3xs {
+  .md\:radius-4, .md\:radius-3xs {
     border-radius: var(--3xs);
   }
-  .md\:radius-2xs {
+  .md\:radius-5, .md\:radius-2xs {
     border-radius: var(--2xs);
   }
-  .md\:radius-xs {
+  .md\:radius-6, .md\:radius-xs {
     border-radius: var(--xs);
   }
-  .md\:radius-sm {
+  .md\:radius-7, .md\:radius-sm {
     border-radius: var(--sm);
   }
-  .md\:radius-md {
+  .md\:radius-8, .md\:radius-md {
     border-radius: var(--md);
   }
-  .md\:radius-lg {
+  .md\:radius-9, .md\:radius-lg {
     border-radius: var(--lg);
   }
-  .md\:radius-xl {
+  .md\:radius-10, .md\:radius-xl {
     border-radius: var(--xl);
   }
-  .md\:radius-2xl {
+  .md\:radius-11, .md\:radius-2xl {
     border-radius: var(--2xl);
   }
   .md\:border-none {
@@ -9360,6 +9616,57 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   }
   .sm\:inset-0 {
     inset: 0;
+  }
+  .sm\:gap-0, .sm\:gap-none {
+    gap: 0;
+  }
+  .sm\:gap-1, .sm\:gap-6xs {
+    gap: var(--6xs);
+  }
+  .sm\:gap-2, .sm\:gap-5xs {
+    gap: var(--5xs);
+  }
+  .sm\:gap-3, .sm\:gap-4xs {
+    gap: var(--4xs);
+  }
+  .sm\:gap-4, .sm\:gap-3xs {
+    gap: var(--3xs);
+  }
+  .sm\:gap-5, .sm\:gap-2xs {
+    gap: var(--2xs);
+  }
+  .sm\:gap-6, .sm\:gap-xs {
+    gap: var(--xs);
+  }
+  .sm\:gap-7, .sm\:gap-sm {
+    gap: var(--sm);
+  }
+  .sm\:gap-8, .sm\:gap-md {
+    gap: var(--md);
+  }
+  .sm\:gap-9, .sm\:gap-lg {
+    gap: var(--lg);
+  }
+  .sm\:gap-10, .sm\:gap-xl {
+    gap: var(--xl);
+  }
+  .sm\:gap-11, .sm\:gap-2xl {
+    gap: var(--2xl);
+  }
+  .sm\:gap-12, .sm\:gap-3xl {
+    gap: var(--3xl);
+  }
+  .sm\:gap-13, .sm\:gap-4xl {
+    gap: var(--4xl);
+  }
+  .sm\:gap-14, .sm\:gap-5xl {
+    gap: var(--5xl);
+  }
+  .sm\:gap-15, .sm\:gap-6xl {
+    gap: var(--6xl);
+  }
+  .sm\:gap-16, .sm\:gap-7xl {
+    gap: var(--7xl);
   }
   .sm\:flow-row-wr {
     flex-flow: row wrap;
@@ -10141,40 +10448,40 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .sm\:m-inline-16, .sm\:m-inline-7xl {
     margin-inline: var(--7xl);
   }
-  .sm\:radius-none {
+  .sm\:radius-0, .sm\:radius-none {
     border-radius: 0;
   }
-  .sm\:radius-6xs {
+  .sm\:radius-1, .sm\:radius-6xs {
     border-radius: var(--6xs);
   }
-  .sm\:radius-5xs {
+  .sm\:radius-2, .sm\:radius-5xs {
     border-radius: var(--5xs);
   }
-  .sm\:radius-4xs {
+  .sm\:radius-3, .sm\:radius-4xs {
     border-radius: var(--4xs);
   }
-  .sm\:radius-3xs {
+  .sm\:radius-4, .sm\:radius-3xs {
     border-radius: var(--3xs);
   }
-  .sm\:radius-2xs {
+  .sm\:radius-5, .sm\:radius-2xs {
     border-radius: var(--2xs);
   }
-  .sm\:radius-xs {
+  .sm\:radius-6, .sm\:radius-xs {
     border-radius: var(--xs);
   }
-  .sm\:radius-sm {
+  .sm\:radius-7, .sm\:radius-sm {
     border-radius: var(--sm);
   }
-  .sm\:radius-md {
+  .sm\:radius-8, .sm\:radius-md {
     border-radius: var(--md);
   }
-  .sm\:radius-lg {
+  .sm\:radius-9, .sm\:radius-lg {
     border-radius: var(--lg);
   }
-  .sm\:radius-xl {
+  .sm\:radius-10, .sm\:radius-xl {
     border-radius: var(--xl);
   }
-  .sm\:radius-2xl {
+  .sm\:radius-11, .sm\:radius-2xl {
     border-radius: var(--2xl);
   }
   .sm\:border-none {

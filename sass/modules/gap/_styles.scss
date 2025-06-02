@@ -1,0 +1,5 @@
+@use '../../abstracts/mixins' as mixin;
+
+.gap {
+	@include mixin.variant-class-generator('gap', 1, 16);
+}
