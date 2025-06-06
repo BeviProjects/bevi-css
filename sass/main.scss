@@ -4,17 +4,17 @@
 @use 'utilities/root' as *;
 
 @use 'modules/reset/styles' as *;
-@use 'modules/helper/styles' as *;
-@use 'modules/color/styles' as *;
 @use 'modules/typography/styles' as *;
+@use 'modules/color/styles' as *;
 @use 'modules/form/styles' as *;
-@use 'modules/scrollbar/styles' as *;
 @use 'modules/layout/styles' as *;
+@use 'modules/scrollbar/styles' as *;
 @use 'modules/position/styles' as *;
-@use 'modules/gap/styles' as *;
 @use 'modules/alignment/styles' as *;
 @use 'modules/spacing/styles' as *;
+@use 'modules/gap/styles' as *;
 @use 'modules/border/styles' as *;
 @use 'modules/transition/styles' as *;
+@use 'modules/helper/styles' as *;
 
 @use 'utilities/responsives' as *;

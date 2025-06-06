@@ -2,24 +2,26 @@
 @use '../abstracts/mixins' as mixin;
 @use '../abstracts/variables' as variable;
 
-@use '../modules/helper/mixins' as helper;
-@use '../modules/color/mixins' as color;
+@use '../modules/reset/mixins' as reset;
 @use '../modules/typography/mixins' as typography;
+@use '../modules/color/mixins' as color;
 @use '../modules/position/mixins' as postition;
-@use '../modules/gap/mixins' as gap;
 @use '../modules/alignment/mixins' as alignment;
 @use '../modules/spacing/mixins' as spacing;
+@use '../modules/gap/mixins' as gap;
 @use '../modules/border/mixins' as border;
+@use '../modules/helper/mixins' as helper;
 
 @each $breakpoint in map.keys(variable.$breakpoints) {
 	@include mixin.media-down($breakpoint) {
-		@include helper.responsive($breakpoint);
-		@include color.responsive($breakpoint);
+		@include reset.responsive($breakpoint);
 		@include typography.responsive($breakpoint);
+		@include color.responsive($breakpoint);
 		@include postition.responsive($breakpoint);
-		@include gap.responsive($breakpoint);
 		@include alignment.responsive($breakpoint);
 		@include spacing.responsive($breakpoint);
+		@include gap.responsive($breakpoint);
 		@include border.responsive($breakpoint);
+		@include helper.responsive($breakpoint);
 	}
 }

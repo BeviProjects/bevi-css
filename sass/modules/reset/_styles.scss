@@ -1,3 +1,7 @@
 @use 'mixins' as m;
 
 @include m.reset;
+
+.all {
+	@include m.all;
+}

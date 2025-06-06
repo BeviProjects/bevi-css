@@ -1,9 +1,5 @@
 @use 'mixins' as m;
 
-.all {
-	@include m.all;
-}
-
 .aspect-ratio {
 	@include m.aspect-ratio;
 }

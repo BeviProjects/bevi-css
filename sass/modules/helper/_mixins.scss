@@ -1,9 +1,5 @@
 @use '../../abstracts/mixins' as mixin;
 
-@mixin all {
-	@include mixin.property(all, initial, inherit, unset, revert);
-}
-
 @mixin aspect-ratio {
 	&-auto {
 		aspect-ratio: auto;
@@ -128,9 +124,6 @@
 }
 
 @mixin responsive($breakpoint) {
-	@include mixin.responsive-class(false, $breakpoint, 'all') {
-		@include all;
-	}
 	@include mixin.responsive-class(false, $breakpoint, 'aspect-ratio') {
 		@include aspect-ratio;
 	}
