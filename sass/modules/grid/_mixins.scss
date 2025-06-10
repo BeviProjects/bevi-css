@@ -1,7 +1,7 @@
 @use '../../abstracts/mixins' as abstract;
 
 @mixin template-column {
-	@for $i from 1 through 6 {
+	@for $i from 1 through 8 {
 		&-tpl-col-#{$i} {
 			grid-template-columns: repeat(#{$i}, 1fr);
 		}
@@ -9,7 +9,7 @@
 }
 
 @mixin template-row {
-	@for $i from 1 through 6 {
+	@for $i from 1 through 8 {
 		&-tpl-row-#{$i} {
 			grid-template-rows: repeat(#{$i}, 1fr);
 		}
