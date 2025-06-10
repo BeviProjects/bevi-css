@@ -143,7 +143,16 @@ $range-text: ('xl', 'lg', 'md', 'sm', 'xs');
 }
 
 @mixin text-transform {
-	@include abstract.property-name(transform, none, capitalize, uppercase, lowercase, full-width, full-size-kana);
+	@include abstract.property-name(
+		transform,
+		text-transform,
+		none,
+		capitalize,
+		uppercase,
+		lowercase,
+		full-width,
+		full-size-kana
+	);
 }
 
 @mixin line-height {

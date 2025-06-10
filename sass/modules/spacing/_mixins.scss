@@ -1,20 +1,20 @@
 @use '../../abstracts/mixins' as mixin;
 
 @mixin space-primitive($property) {
-	@include mixin.class-none($property);
+	@include mixin.class-zero($property);
 	@include mixin.class-specific-range($property);
 }
 
 @mixin space-simple($class, $property) {
 	&#{$class} {
-		@include mixin.class-none($property);
+		@include mixin.class-zero($property);
 		@include mixin.class-specific-range($property);
 	}
 }
 
 @mixin space-complex($class, $property) {
 	&-#{$class} {
-		@include mixin.class-none($property);
+		@include mixin.class-zero($property);
 		@include mixin.class-specific-range($property);
 	}
 }

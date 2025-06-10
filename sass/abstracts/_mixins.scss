@@ -3,27 +3,6 @@
 @use 'variables' as v;
 @use 'functions' as f;
 
-/// Sumário:
-/// ---- Variables ----
-/// 34 - Mixin para gerar variáveis de tamanho
-/// 56 - Mixin repsonsável por gerar variáveis CSS com base na lista de tamanhos e um range específico
-///
-/// ---- Classes ----
-/// 72 - Mixin para gerar classes com variantes
-/// 91 - Mixin para gerar classes com variantes de tamanho
-/// 112 - Mixin for generating classes with custom names based on a CSS property
-/// 131 - Mixin for generating classes with specific range of sizes
-/// 148 - Mixin for generating classes with a specific property set to 'none'
-///
-/// ---- Responsives ----
-/// 164 - Mixin for creating media queries for screens smaller than the specified breakpoint
-/// 177 - Shortcut mixin for mobile devices (smaller than 'lg' breakpoint)
-/// 194 - Mixin for creating responsive classes with optional prefixes
-///
-/// ---- Utilities ----
-/// 225 - Mixin para gerar classes de flexbox
-/// 264 - Mixin para gerar classes de grid
-
 /// Mixin para gerar todas as variáveis de tamanho
 ///
 /// @requires {variable} sizes - Lista com todos os tamanhos
@@ -48,12 +27,12 @@
 ///
 /// @param {string} property - Propriedade CSS a ser aplicada
 /// @param {number} num-start - Número inicial do range (padrão: 1)
-/// @param {number} num-end - Número final do range (padrão: 16)
+/// @param {number} num-end - Número final do range (padrão: 23)
 ///
-/// @example scss - @include var-specific-range('padding', 1, 16);
+/// @example scss - @include var-specific-range('padding', 1, 23);
 ///
 /// @output scss - --padding-1: var(--1); --padding-2: var(--2); --padding-3: var(--3); ...
-@mixin var-specific-range($property, $num-start: 1, $num-end: 16) {
+@mixin var-specific-range($property, $num-start: 1, $num-end: 23) {
 	@for $i from $num-start through $num-end {
 		$var-name: f.get-size($i, 'name');
 		--#{$property}-#{$var-name}: var(--#{$var-name});
@@ -83,12 +62,12 @@
 ///
 /// @param {string} property - Propriedade CSS a ser aplicada
 /// @param {number} num-start - Número inicial do range (padrão: 1)
-/// @param {number} num-end - Número final do range (padrão: 16)
+/// @param {number} num-end - Número final do range (padrão: 23)
 ///
-/// @example scss - @include variant-class-generator('margin', 1, 16);
+/// @example scss - @include variant-class-generator('margin', 1, 23);
 ///
 /// @output scss - .margin-none { margin: 0; } .margin-1 { margin: var(--1); } .margin-2 { margin: var(--2); } ...
-@mixin variant-class-generator($property, $num-start: 1, $num-end: 16) {
+@mixin variant-class-generator($property, $num-start: 1, $num-end: 23) {
 	&-0,
 	&-none {
 		#{$property}: 0;
@@ -126,12 +105,12 @@
 ///
 /// @param {string} property - CSS property to be applied
 /// @param {number} num-start - Starting number of the range (default: 1)
-/// @param {number} num-end - Ending number of the range (default: 16)
+/// @param {number} num-end - Ending number of the range (default: 23)
 ///
-/// @example scss - @include class-specific-range('padding', 1, 16);
+/// @example scss - @include class-specific-range('padding', 1, 23);
 ///
 /// @output scss - .padding-1 { padding: var(--1); } .padding-2 { padding: var(--2); } .padding-3 { padding: var(--3); } ...
-@mixin class-specific-range($property, $num-start: 1, $num-end: 16) {
+@mixin class-specific-range($property, $num-start: 1, $num-end: 23) {
 	@for $i from $num-start through $num-end {
 		$var-name: f.get-size($i, 'name');
 		&-#{$i},
@@ -145,12 +124,13 @@
 ///
 /// @param {string} property - CSS property to be set to 'none'
 ///
-/// @example scss - @include class-none('display');
+/// @example scss - @include class-zero('display');
 ///
 /// @output scss - .display-none { display: none; }
-@mixin class-none($property) {
+@mixin class-zero($property) {
+	&-0,
 	&-none {
-		#{$property}: none;
+		#{$property}: 0;
 	}
 }
 
