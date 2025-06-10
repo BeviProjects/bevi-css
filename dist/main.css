@@ -184,6 +184,10 @@
   --swt-background-color-disabled: var(--gray-95);
   --swt-border-color-checked-disabled: transparent;
   --swt-background-color-checked-disabled: hsla(185, 72%, 50%, 0.16);
+  --container-sm: 64rem;
+  --container-md: 80rem;
+  --container-lg: 96rem;
+  --container-full: 120rem;
   --bv-scrollbar-size: 0.75rem;
   --bv-scrollbar-background: var(--gray-80);
   --bv-scrollbar-radius: 1rem;

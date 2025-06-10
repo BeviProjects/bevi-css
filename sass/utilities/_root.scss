@@ -2,6 +2,7 @@
 @use '../modules/typography/variables' as typography;
 @use '../modules/color/mixins' as colors;
 @use '../modules/form/variables' as form;
+@use '../modules/layout/variables' as layout;
 @use '../modules/scrollbar/variables' as scrollbar;
 @use '../modules/transition/variables' as transition;
 @use '../modules/helper/variables' as helper;
@@ -11,6 +12,7 @@
 	@include colors.var-color-generator;
 	@include typography.variables;
 	@include form.variables;
+	@include layout.variables;
 	@include scrollbar.variables;
 	@include transition.variables;
 	@include helper.variables;
