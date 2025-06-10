@@ -63,6 +63,16 @@
   --cherry-42: hsl(var(--cherry-42-base));
 }
 
+.color-inherit {
+  color: inherit;
+}
+.color-initial {
+  color: initial;
+}
+.color-unset {
+  color: unset;
+}
+
 .color-violet-10 {
   color: var(--violet-10);
 }
@@ -137,6 +147,16 @@
 }
 .color-cherry-42 {
   color: var(--cherry-42);
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+.bg-initial {
+  background-color: initial;
+}
+.bg-unset {
+  background-color: unset;
 }
 
 .bg-violet-10 {
@@ -368,6 +388,15 @@
 }
 
 @media (max-width: 96rem) {
+  .\32 xl\:color-inherit {
+    color: inherit;
+  }
+  .\32 xl\:color-initial {
+    color: initial;
+  }
+  .\32 xl\:color-unset {
+    color: unset;
+  }
   .\32 xl\:color-violet-10 {
     color: var(--violet-10);
   }
@@ -442,6 +471,15 @@
   }
   .\32 xl\:color-cherry-42 {
     color: var(--cherry-42);
+  }
+  .\32 xl\:bg-inherit {
+    color: inherit;
+  }
+  .\32 xl\:bg-initial {
+    color: initial;
+  }
+  .\32 xl\:bg-unset {
+    color: unset;
   }
   .\32 xl\:bg-violet-10 {
     background-color: var(--violet-10);
@@ -670,6 +708,15 @@
   }
 }
 @media (max-width: 80rem) {
+  .xl\:color-inherit {
+    color: inherit;
+  }
+  .xl\:color-initial {
+    color: initial;
+  }
+  .xl\:color-unset {
+    color: unset;
+  }
   .xl\:color-violet-10 {
     color: var(--violet-10);
   }
@@ -744,6 +791,15 @@
   }
   .xl\:color-cherry-42 {
     color: var(--cherry-42);
+  }
+  .xl\:bg-inherit {
+    color: inherit;
+  }
+  .xl\:bg-initial {
+    color: initial;
+  }
+  .xl\:bg-unset {
+    color: unset;
   }
   .xl\:bg-violet-10 {
     background-color: var(--violet-10);
@@ -972,6 +1028,15 @@
   }
 }
 @media (max-width: 64rem) {
+  .lg\:color-inherit {
+    color: inherit;
+  }
+  .lg\:color-initial {
+    color: initial;
+  }
+  .lg\:color-unset {
+    color: unset;
+  }
   .lg\:color-violet-10 {
     color: var(--violet-10);
   }
@@ -1046,6 +1111,15 @@
   }
   .lg\:color-cherry-42 {
     color: var(--cherry-42);
+  }
+  .lg\:bg-inherit {
+    color: inherit;
+  }
+  .lg\:bg-initial {
+    color: initial;
+  }
+  .lg\:bg-unset {
+    color: unset;
   }
   .lg\:bg-violet-10 {
     background-color: var(--violet-10);
@@ -1274,6 +1348,15 @@
   }
 }
 @media (max-width: 48rem) {
+  .md\:color-inherit {
+    color: inherit;
+  }
+  .md\:color-initial {
+    color: initial;
+  }
+  .md\:color-unset {
+    color: unset;
+  }
   .md\:color-violet-10 {
     color: var(--violet-10);
   }
@@ -1348,6 +1431,15 @@
   }
   .md\:color-cherry-42 {
     color: var(--cherry-42);
+  }
+  .md\:bg-inherit {
+    color: inherit;
+  }
+  .md\:bg-initial {
+    color: initial;
+  }
+  .md\:bg-unset {
+    color: unset;
   }
   .md\:bg-violet-10 {
     background-color: var(--violet-10);
@@ -1576,6 +1668,15 @@
   }
 }
 @media (max-width: 40rem) {
+  .sm\:color-inherit {
+    color: inherit;
+  }
+  .sm\:color-initial {
+    color: initial;
+  }
+  .sm\:color-unset {
+    color: unset;
+  }
   .sm\:color-violet-10 {
     color: var(--violet-10);
   }
@@ -1650,6 +1751,15 @@
   }
   .sm\:color-cherry-42 {
     color: var(--cherry-42);
+  }
+  .sm\:bg-inherit {
+    color: inherit;
+  }
+  .sm\:bg-initial {
+    color: initial;
+  }
+  .sm\:bg-unset {
+    color: unset;
   }
   .sm\:bg-violet-10 {
     background-color: var(--violet-10);

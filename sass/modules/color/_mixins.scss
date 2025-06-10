@@ -20,6 +20,16 @@
 	}
 }
 
+@mixin class-color-default($property) {
+	$default-values: 'inherit', 'initial', 'unset';
+
+	@each $name in $default-values {
+		&-#{$name} {
+			#{$property}: #{$name};
+		}
+	}
+}
+
 @mixin class-generator-variants($property, $hovering: false) {
 	@each $key, $value in v.$colors {
 		$l: map.get($value, 'l');
@@ -54,9 +64,11 @@
 
 @mixin responsive($breakpoint) {
 	@include mixin.responsive-class(false, $breakpoint, 'color') {
+		@include class-color-default('color');
 		@include class-generator-variants('color');
 	}
 	@include mixin.responsive-class(false, $breakpoint, 'bg') {
+		@include class-color-default('color');
 		@include class-generator-variants('background-color');
 	}
 	@include mixin.responsive-class(false, $breakpoint, 'color') {
