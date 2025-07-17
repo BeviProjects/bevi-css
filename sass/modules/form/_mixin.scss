@@ -106,7 +106,6 @@
 
 	// Active
 	&:where(:not(:disabled)):active {
-		background-color: var(--btn-background-active);
 		outline: {
 			color: var(--btn-outline-color-active);
 		}
