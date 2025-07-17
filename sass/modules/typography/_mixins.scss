@@ -1,4 +1,4 @@
-@use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin base {
 	body {
@@ -48,35 +48,11 @@
 	}
 }
 
-$range-display: ('xl', 'lg', 'md', 'sm', 'xs');
-
-@mixin display {
-	@each $size in $range-display {
-		&-#{$size} {
-			font-size: var(--display-#{$size});
-		}
-	}
-}
-
-$range-title: ('xl', 'lg', 'md', 'sm', 'xs');
-
-@mixin title {
-	@each $size in $range-title {
-		&-#{$size} {
-			font-size: var(--title-#{$size});
-		}
-	}
-}
-
 $range-text: ('xl', 'lg', 'md', 'sm', 'xs');
 
 @mixin font-size {
-	@each $size in $range-text {
-		@at-root {
-			&-size-#{$size} {
-				font-size: var(--font-size-#{$size});
-			}
-		}
+	&-size{
+		@include mixin.class-specific-range('font-size');
 	}
 }
 
@@ -135,15 +111,15 @@ $range-text: ('xl', 'lg', 'md', 'sm', 'xs');
 }
 
 @mixin font-style {
-	@include abstract.property-name(style, font-style, normal, italic, oblique);
+	@include mixin.property-name(style, font-style, normal, italic, oblique);
 }
 
 @mixin text-decoration {
-	@include abstract.property-name(decoration, text-decoration, none, underline, overline, line-through);
+	@include mixin.property-name(decoration, text-decoration, none, underline, overline, line-through);
 }
 
 @mixin text-transform {
-	@include abstract.property-name(
+	@include mixin.property-name(
 		transform,
 		text-transform,
 		none,
@@ -166,33 +142,27 @@ $range-text: ('xl', 'lg', 'md', 'sm', 'xs');
 
 // Mixin text align
 @mixin text-align {
-	@include abstract.property-name(align, text-align, left, center, right);
+	@include mixin.property-name(align, text-align, left, center, right);
 }
 
 //#region Responsive
 // Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
 
 @mixin responsive($breakpoint) {
-	@include abstract.responsive-class(false, $breakpoint, 'h') {
+	@include mixin.responsive-class(false, $breakpoint, 'h') {
 		@include heading-responsive;
 	}
-	@include abstract.responsive-class(false, $breakpoint, 'display') {
-		@include display;
-	}
-	@include abstract.responsive-class(false, $breakpoint, 'title') {
-		@include title;
-	}
-	@include abstract.responsive-class(false, $breakpoint, 'font') {
+	@include mixin.responsive-class(false, $breakpoint, 'font') {
 		@include font-size;
 		@include font-style;
 		@include font-weight;
 	}
-	@include abstract.responsive-class(false, $breakpoint, 'text') {
+	@include mixin.responsive-class(false, $breakpoint, 'text') {
 		@include text-align;
 		@include text-decoration;
 		@include text-transform;
 	}
-	@include abstract.responsive-class(false, $breakpoint, 'line-height') {
+	@include mixin.responsive-class(false, $breakpoint, 'line-height') {
 		@include line-height;
 	}
 }

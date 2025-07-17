@@ -29,22 +29,6 @@
 	@include m.heading;
 }
 
-:where(.display-xl, .display-lg, .display-md, .display-sm, .display-xs) {
-	@include m.base-titles(display);
-}
-
-.display {
-	@include m.display;
-}
-
-:where(.title-lg, .title-md, .title-sm, .title-xs, .title-2xs, .title-3xs) {
-	@include m.base-titles(title);
-}
-
-.title {
-	@include m.title;
-}
-
 .font {
 	@include m.font-size;
 	@include m.font-style;

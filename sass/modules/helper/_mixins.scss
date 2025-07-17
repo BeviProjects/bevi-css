@@ -130,9 +130,6 @@
 	@include mixin.responsive-class(false, $breakpoint, 'cursor') {
 		@include cursor;
 	}
-	@include mixin.responsive-class(false, $breakpoint, 'ds') {
-		@include display;
-	}
 	@include mixin.responsive-class(false, $breakpoint, 'flex-bgs') {
 		@include flex-bgs;
 	}

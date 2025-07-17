@@ -92,21 +92,6 @@
   --heading-4: 1.25em;
   --heading-5: 1em;
   --heading-6: 0.75em;
-  --display-xl: 12em;
-  --display-lg: 6em;
-  --display-md: 4.5em;
-  --display-sm: 4em;
-  --display-xs: 3em;
-  --title-lg: 2.5em;
-  --title-md: 2em;
-  --title-sm: 1.5em;
-  --title-xs: 1.25em;
-  --title-2xs: 1em;
-  --title-3xs: 0.75em;
-  --font-size-xs: var(--xs);
-  --font-size-sm: var(--sm);
-  --font-size-md: var(--md);
-  --font-size-lg: var(--lg);
   --font-weight-heading: 400;
   --font-weight-display: 400;
   --font-weight-title: 600;
@@ -348,72 +333,75 @@ h6,
   font-size: var(--heading-6);
 }
 
-:where(.display-xl, .display-lg, .display-md, .display-sm, .display-xs) {
-  font-family: var(--font-family-display);
-  font-weight: var(--font-weight-display);
-  line-height: var(--display-line-height);
-  color: var(--display-color);
+.font-size-1, .font-size-6xs {
+  font-size: var(--6xs);
 }
-
-.display-xl {
-  font-size: var(--display-xl);
+.font-size-2, .font-size-5xs {
+  font-size: var(--5xs);
 }
-.display-lg {
-  font-size: var(--display-lg);
+.font-size-3, .font-size-4xs {
+  font-size: var(--4xs);
 }
-.display-md {
-  font-size: var(--display-md);
+.font-size-4, .font-size-3xs {
+  font-size: var(--3xs);
 }
-.display-sm {
-  font-size: var(--display-sm);
+.font-size-5, .font-size-2xs {
+  font-size: var(--2xs);
 }
-.display-xs {
-  font-size: var(--display-xs);
+.font-size-6, .font-size-xs {
+  font-size: var(--xs);
 }
-
-:where(.title-lg, .title-md, .title-sm, .title-xs, .title-2xs, .title-3xs) {
-  font-family: var(--font-family-title);
-  font-weight: var(--font-weight-title);
-  line-height: var(--title-line-height);
-  color: var(--title-color);
+.font-size-7, .font-size-sm {
+  font-size: var(--sm);
 }
-
-.title-xl {
-  font-size: var(--title-xl);
+.font-size-8, .font-size-md {
+  font-size: var(--md);
 }
-.title-lg {
-  font-size: var(--title-lg);
+.font-size-9, .font-size-lg {
+  font-size: var(--lg);
 }
-.title-md {
-  font-size: var(--title-md);
+.font-size-10, .font-size-xl {
+  font-size: var(--xl);
 }
-.title-sm {
-  font-size: var(--title-sm);
+.font-size-11, .font-size-2xl {
+  font-size: var(--2xl);
 }
-.title-xs {
-  font-size: var(--title-xs);
+.font-size-12, .font-size-3xl {
+  font-size: var(--3xl);
 }
-
-.font-size-xl {
-  font-size: var(--font-size-xl);
+.font-size-13, .font-size-4xl {
+  font-size: var(--4xl);
 }
-
-.font-size-lg {
-  font-size: var(--font-size-lg);
+.font-size-14, .font-size-5xl {
+  font-size: var(--5xl);
 }
-
-.font-size-md {
-  font-size: var(--font-size-md);
+.font-size-15, .font-size-6xl {
+  font-size: var(--6xl);
 }
-
-.font-size-sm {
-  font-size: var(--font-size-sm);
+.font-size-16, .font-size-7xl {
+  font-size: var(--7xl);
 }
-
-.font-size-xs {
-  font-size: var(--font-size-xs);
+.font-size-17, .font-size-8xl {
+  font-size: var(--8xl);
 }
-
+.font-size-18, .font-size-9xl {
+  font-size: var(--9xl);
+}
+.font-size-19, .font-size-10xl {
+  font-size: var(--10xl);
+}
+.font-size-20, .font-size-12xl {
+  font-size: var(--12xl);
+}
+.font-size-21, .font-size-13xl {
+  font-size: var(--13xl);
+}
+.font-size-22, .font-size-14xl {
+  font-size: var(--14xl);
+}
+.font-size-23, .font-size-15xl {
+  font-size: var(--15xl);
+}
 .font-style-normal {
   font-style: normal;
 }
@@ -2886,50 +2874,74 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .\32 xl\:h6, .\32 xl\:heading-6 {
     font-size: var(--heading-6);
   }
-  .\32 xl\:display-xl {
-    font-size: var(--display-xl);
+  .\32 xl\:font-size-1, .\32 xl\:font-size-6xs {
+    font-size: var(--6xs);
   }
-  .\32 xl\:display-lg {
-    font-size: var(--display-lg);
+  .\32 xl\:font-size-2, .\32 xl\:font-size-5xs {
+    font-size: var(--5xs);
   }
-  .\32 xl\:display-md {
-    font-size: var(--display-md);
+  .\32 xl\:font-size-3, .\32 xl\:font-size-4xs {
+    font-size: var(--4xs);
   }
-  .\32 xl\:display-sm {
-    font-size: var(--display-sm);
+  .\32 xl\:font-size-4, .\32 xl\:font-size-3xs {
+    font-size: var(--3xs);
   }
-  .\32 xl\:display-xs {
-    font-size: var(--display-xs);
+  .\32 xl\:font-size-5, .\32 xl\:font-size-2xs {
+    font-size: var(--2xs);
   }
-  .\32 xl\:title-xl {
-    font-size: var(--title-xl);
+  .\32 xl\:font-size-6, .\32 xl\:font-size-xs {
+    font-size: var(--xs);
   }
-  .\32 xl\:title-lg {
-    font-size: var(--title-lg);
+  .\32 xl\:font-size-7, .\32 xl\:font-size-sm {
+    font-size: var(--sm);
   }
-  .\32 xl\:title-md {
-    font-size: var(--title-md);
+  .\32 xl\:font-size-8, .\32 xl\:font-size-md {
+    font-size: var(--md);
   }
-  .\32 xl\:title-sm {
-    font-size: var(--title-sm);
+  .\32 xl\:font-size-9, .\32 xl\:font-size-lg {
+    font-size: var(--lg);
   }
-  .\32 xl\:title-xs {
-    font-size: var(--title-xs);
+  .\32 xl\:font-size-10, .\32 xl\:font-size-xl {
+    font-size: var(--xl);
   }
-  .\32 xl\:font-size-xl {
-    font-size: var(--font-size-xl);
+  .\32 xl\:font-size-11, .\32 xl\:font-size-2xl {
+    font-size: var(--2xl);
   }
-  .\32 xl\:font-size-lg {
-    font-size: var(--font-size-lg);
+  .\32 xl\:font-size-12, .\32 xl\:font-size-3xl {
+    font-size: var(--3xl);
   }
-  .\32 xl\:font-size-md {
-    font-size: var(--font-size-md);
+  .\32 xl\:font-size-13, .\32 xl\:font-size-4xl {
+    font-size: var(--4xl);
   }
-  .\32 xl\:font-size-sm {
-    font-size: var(--font-size-sm);
+  .\32 xl\:font-size-14, .\32 xl\:font-size-5xl {
+    font-size: var(--5xl);
   }
-  .\32 xl\:font-size-xs {
-    font-size: var(--font-size-xs);
+  .\32 xl\:font-size-15, .\32 xl\:font-size-6xl {
+    font-size: var(--6xl);
+  }
+  .\32 xl\:font-size-16, .\32 xl\:font-size-7xl {
+    font-size: var(--7xl);
+  }
+  .\32 xl\:font-size-17, .\32 xl\:font-size-8xl {
+    font-size: var(--8xl);
+  }
+  .\32 xl\:font-size-18, .\32 xl\:font-size-9xl {
+    font-size: var(--9xl);
+  }
+  .\32 xl\:font-size-19, .\32 xl\:font-size-10xl {
+    font-size: var(--10xl);
+  }
+  .\32 xl\:font-size-20, .\32 xl\:font-size-12xl {
+    font-size: var(--12xl);
+  }
+  .\32 xl\:font-size-21, .\32 xl\:font-size-13xl {
+    font-size: var(--13xl);
+  }
+  .\32 xl\:font-size-22, .\32 xl\:font-size-14xl {
+    font-size: var(--14xl);
+  }
+  .\32 xl\:font-size-23, .\32 xl\:font-size-15xl {
+    font-size: var(--15xl);
   }
   .\32 xl\:font-style-normal {
     font-style: normal;
@@ -4650,50 +4662,6 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .\32 xl\:cursor-text {
     cursor: text;
   }
-  .\32 xl\:ds-block {
-    display: block;
-  }
-  .\32 xl\:ds-inline {
-    display: inline;
-  }
-  .\32 xl\:ds-inline-block {
-    display: inline-block;
-  }
-  .\32 xl\:ds-none {
-    display: none;
-  }
-  .\32 xl\:ds-flex {
-    display: flex;
-  }
-  .\32 xl\:ds-flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .\32 xl\:ds-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .\32 xl\:ds-flex-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .\32 xl\:ds-inline-flex {
-    display: inline-flex;
-  }
-  .\32 xl\:ds-inline-flex-center {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .\32 xl\:ds-grid {
-    display: grid;
-  }
-  .\32 xl\:ds-inline-grid {
-    display: inline-grid;
-  }
   .\32 xl\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
@@ -4855,50 +4823,74 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .xl\:h6, .xl\:heading-6 {
     font-size: var(--heading-6);
   }
-  .xl\:display-xl {
-    font-size: var(--display-xl);
+  .xl\:font-size-1, .xl\:font-size-6xs {
+    font-size: var(--6xs);
   }
-  .xl\:display-lg {
-    font-size: var(--display-lg);
+  .xl\:font-size-2, .xl\:font-size-5xs {
+    font-size: var(--5xs);
   }
-  .xl\:display-md {
-    font-size: var(--display-md);
+  .xl\:font-size-3, .xl\:font-size-4xs {
+    font-size: var(--4xs);
   }
-  .xl\:display-sm {
-    font-size: var(--display-sm);
+  .xl\:font-size-4, .xl\:font-size-3xs {
+    font-size: var(--3xs);
   }
-  .xl\:display-xs {
-    font-size: var(--display-xs);
+  .xl\:font-size-5, .xl\:font-size-2xs {
+    font-size: var(--2xs);
   }
-  .xl\:title-xl {
-    font-size: var(--title-xl);
+  .xl\:font-size-6, .xl\:font-size-xs {
+    font-size: var(--xs);
   }
-  .xl\:title-lg {
-    font-size: var(--title-lg);
+  .xl\:font-size-7, .xl\:font-size-sm {
+    font-size: var(--sm);
   }
-  .xl\:title-md {
-    font-size: var(--title-md);
+  .xl\:font-size-8, .xl\:font-size-md {
+    font-size: var(--md);
   }
-  .xl\:title-sm {
-    font-size: var(--title-sm);
+  .xl\:font-size-9, .xl\:font-size-lg {
+    font-size: var(--lg);
   }
-  .xl\:title-xs {
-    font-size: var(--title-xs);
+  .xl\:font-size-10, .xl\:font-size-xl {
+    font-size: var(--xl);
   }
-  .xl\:font-size-xl {
-    font-size: var(--font-size-xl);
+  .xl\:font-size-11, .xl\:font-size-2xl {
+    font-size: var(--2xl);
   }
-  .xl\:font-size-lg {
-    font-size: var(--font-size-lg);
+  .xl\:font-size-12, .xl\:font-size-3xl {
+    font-size: var(--3xl);
   }
-  .xl\:font-size-md {
-    font-size: var(--font-size-md);
+  .xl\:font-size-13, .xl\:font-size-4xl {
+    font-size: var(--4xl);
   }
-  .xl\:font-size-sm {
-    font-size: var(--font-size-sm);
+  .xl\:font-size-14, .xl\:font-size-5xl {
+    font-size: var(--5xl);
   }
-  .xl\:font-size-xs {
-    font-size: var(--font-size-xs);
+  .xl\:font-size-15, .xl\:font-size-6xl {
+    font-size: var(--6xl);
+  }
+  .xl\:font-size-16, .xl\:font-size-7xl {
+    font-size: var(--7xl);
+  }
+  .xl\:font-size-17, .xl\:font-size-8xl {
+    font-size: var(--8xl);
+  }
+  .xl\:font-size-18, .xl\:font-size-9xl {
+    font-size: var(--9xl);
+  }
+  .xl\:font-size-19, .xl\:font-size-10xl {
+    font-size: var(--10xl);
+  }
+  .xl\:font-size-20, .xl\:font-size-12xl {
+    font-size: var(--12xl);
+  }
+  .xl\:font-size-21, .xl\:font-size-13xl {
+    font-size: var(--13xl);
+  }
+  .xl\:font-size-22, .xl\:font-size-14xl {
+    font-size: var(--14xl);
+  }
+  .xl\:font-size-23, .xl\:font-size-15xl {
+    font-size: var(--15xl);
   }
   .xl\:font-style-normal {
     font-style: normal;
@@ -6619,50 +6611,6 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .xl\:cursor-text {
     cursor: text;
   }
-  .xl\:ds-block {
-    display: block;
-  }
-  .xl\:ds-inline {
-    display: inline;
-  }
-  .xl\:ds-inline-block {
-    display: inline-block;
-  }
-  .xl\:ds-none {
-    display: none;
-  }
-  .xl\:ds-flex {
-    display: flex;
-  }
-  .xl\:ds-flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .xl\:ds-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .xl\:ds-flex-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .xl\:ds-inline-flex {
-    display: inline-flex;
-  }
-  .xl\:ds-inline-flex-center {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .xl\:ds-grid {
-    display: grid;
-  }
-  .xl\:ds-inline-grid {
-    display: inline-grid;
-  }
   .xl\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
@@ -6824,50 +6772,74 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .lg\:h6, .lg\:heading-6 {
     font-size: var(--heading-6);
   }
-  .lg\:display-xl {
-    font-size: var(--display-xl);
+  .lg\:font-size-1, .lg\:font-size-6xs {
+    font-size: var(--6xs);
   }
-  .lg\:display-lg {
-    font-size: var(--display-lg);
+  .lg\:font-size-2, .lg\:font-size-5xs {
+    font-size: var(--5xs);
   }
-  .lg\:display-md {
-    font-size: var(--display-md);
+  .lg\:font-size-3, .lg\:font-size-4xs {
+    font-size: var(--4xs);
   }
-  .lg\:display-sm {
-    font-size: var(--display-sm);
+  .lg\:font-size-4, .lg\:font-size-3xs {
+    font-size: var(--3xs);
   }
-  .lg\:display-xs {
-    font-size: var(--display-xs);
+  .lg\:font-size-5, .lg\:font-size-2xs {
+    font-size: var(--2xs);
   }
-  .lg\:title-xl {
-    font-size: var(--title-xl);
+  .lg\:font-size-6, .lg\:font-size-xs {
+    font-size: var(--xs);
   }
-  .lg\:title-lg {
-    font-size: var(--title-lg);
+  .lg\:font-size-7, .lg\:font-size-sm {
+    font-size: var(--sm);
   }
-  .lg\:title-md {
-    font-size: var(--title-md);
+  .lg\:font-size-8, .lg\:font-size-md {
+    font-size: var(--md);
   }
-  .lg\:title-sm {
-    font-size: var(--title-sm);
+  .lg\:font-size-9, .lg\:font-size-lg {
+    font-size: var(--lg);
   }
-  .lg\:title-xs {
-    font-size: var(--title-xs);
+  .lg\:font-size-10, .lg\:font-size-xl {
+    font-size: var(--xl);
   }
-  .lg\:font-size-xl {
-    font-size: var(--font-size-xl);
+  .lg\:font-size-11, .lg\:font-size-2xl {
+    font-size: var(--2xl);
   }
-  .lg\:font-size-lg {
-    font-size: var(--font-size-lg);
+  .lg\:font-size-12, .lg\:font-size-3xl {
+    font-size: var(--3xl);
   }
-  .lg\:font-size-md {
-    font-size: var(--font-size-md);
+  .lg\:font-size-13, .lg\:font-size-4xl {
+    font-size: var(--4xl);
   }
-  .lg\:font-size-sm {
-    font-size: var(--font-size-sm);
+  .lg\:font-size-14, .lg\:font-size-5xl {
+    font-size: var(--5xl);
   }
-  .lg\:font-size-xs {
-    font-size: var(--font-size-xs);
+  .lg\:font-size-15, .lg\:font-size-6xl {
+    font-size: var(--6xl);
+  }
+  .lg\:font-size-16, .lg\:font-size-7xl {
+    font-size: var(--7xl);
+  }
+  .lg\:font-size-17, .lg\:font-size-8xl {
+    font-size: var(--8xl);
+  }
+  .lg\:font-size-18, .lg\:font-size-9xl {
+    font-size: var(--9xl);
+  }
+  .lg\:font-size-19, .lg\:font-size-10xl {
+    font-size: var(--10xl);
+  }
+  .lg\:font-size-20, .lg\:font-size-12xl {
+    font-size: var(--12xl);
+  }
+  .lg\:font-size-21, .lg\:font-size-13xl {
+    font-size: var(--13xl);
+  }
+  .lg\:font-size-22, .lg\:font-size-14xl {
+    font-size: var(--14xl);
+  }
+  .lg\:font-size-23, .lg\:font-size-15xl {
+    font-size: var(--15xl);
   }
   .lg\:font-style-normal {
     font-style: normal;
@@ -8588,50 +8560,6 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .lg\:cursor-text {
     cursor: text;
   }
-  .lg\:ds-block {
-    display: block;
-  }
-  .lg\:ds-inline {
-    display: inline;
-  }
-  .lg\:ds-inline-block {
-    display: inline-block;
-  }
-  .lg\:ds-none {
-    display: none;
-  }
-  .lg\:ds-flex {
-    display: flex;
-  }
-  .lg\:ds-flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .lg\:ds-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .lg\:ds-flex-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .lg\:ds-inline-flex {
-    display: inline-flex;
-  }
-  .lg\:ds-inline-flex-center {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .lg\:ds-grid {
-    display: grid;
-  }
-  .lg\:ds-inline-grid {
-    display: inline-grid;
-  }
   .lg\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
@@ -8793,50 +8721,74 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .md\:h6, .md\:heading-6 {
     font-size: var(--heading-6);
   }
-  .md\:display-xl {
-    font-size: var(--display-xl);
+  .md\:font-size-1, .md\:font-size-6xs {
+    font-size: var(--6xs);
   }
-  .md\:display-lg {
-    font-size: var(--display-lg);
+  .md\:font-size-2, .md\:font-size-5xs {
+    font-size: var(--5xs);
   }
-  .md\:display-md {
-    font-size: var(--display-md);
+  .md\:font-size-3, .md\:font-size-4xs {
+    font-size: var(--4xs);
   }
-  .md\:display-sm {
-    font-size: var(--display-sm);
+  .md\:font-size-4, .md\:font-size-3xs {
+    font-size: var(--3xs);
   }
-  .md\:display-xs {
-    font-size: var(--display-xs);
+  .md\:font-size-5, .md\:font-size-2xs {
+    font-size: var(--2xs);
   }
-  .md\:title-xl {
-    font-size: var(--title-xl);
+  .md\:font-size-6, .md\:font-size-xs {
+    font-size: var(--xs);
   }
-  .md\:title-lg {
-    font-size: var(--title-lg);
+  .md\:font-size-7, .md\:font-size-sm {
+    font-size: var(--sm);
   }
-  .md\:title-md {
-    font-size: var(--title-md);
+  .md\:font-size-8, .md\:font-size-md {
+    font-size: var(--md);
   }
-  .md\:title-sm {
-    font-size: var(--title-sm);
+  .md\:font-size-9, .md\:font-size-lg {
+    font-size: var(--lg);
   }
-  .md\:title-xs {
-    font-size: var(--title-xs);
+  .md\:font-size-10, .md\:font-size-xl {
+    font-size: var(--xl);
   }
-  .md\:font-size-xl {
-    font-size: var(--font-size-xl);
+  .md\:font-size-11, .md\:font-size-2xl {
+    font-size: var(--2xl);
   }
-  .md\:font-size-lg {
-    font-size: var(--font-size-lg);
+  .md\:font-size-12, .md\:font-size-3xl {
+    font-size: var(--3xl);
   }
-  .md\:font-size-md {
-    font-size: var(--font-size-md);
+  .md\:font-size-13, .md\:font-size-4xl {
+    font-size: var(--4xl);
   }
-  .md\:font-size-sm {
-    font-size: var(--font-size-sm);
+  .md\:font-size-14, .md\:font-size-5xl {
+    font-size: var(--5xl);
   }
-  .md\:font-size-xs {
-    font-size: var(--font-size-xs);
+  .md\:font-size-15, .md\:font-size-6xl {
+    font-size: var(--6xl);
+  }
+  .md\:font-size-16, .md\:font-size-7xl {
+    font-size: var(--7xl);
+  }
+  .md\:font-size-17, .md\:font-size-8xl {
+    font-size: var(--8xl);
+  }
+  .md\:font-size-18, .md\:font-size-9xl {
+    font-size: var(--9xl);
+  }
+  .md\:font-size-19, .md\:font-size-10xl {
+    font-size: var(--10xl);
+  }
+  .md\:font-size-20, .md\:font-size-12xl {
+    font-size: var(--12xl);
+  }
+  .md\:font-size-21, .md\:font-size-13xl {
+    font-size: var(--13xl);
+  }
+  .md\:font-size-22, .md\:font-size-14xl {
+    font-size: var(--14xl);
+  }
+  .md\:font-size-23, .md\:font-size-15xl {
+    font-size: var(--15xl);
   }
   .md\:font-style-normal {
     font-style: normal;
@@ -10557,50 +10509,6 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .md\:cursor-text {
     cursor: text;
   }
-  .md\:ds-block {
-    display: block;
-  }
-  .md\:ds-inline {
-    display: inline;
-  }
-  .md\:ds-inline-block {
-    display: inline-block;
-  }
-  .md\:ds-none {
-    display: none;
-  }
-  .md\:ds-flex {
-    display: flex;
-  }
-  .md\:ds-flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .md\:ds-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .md\:ds-flex-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .md\:ds-inline-flex {
-    display: inline-flex;
-  }
-  .md\:ds-inline-flex-center {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .md\:ds-grid {
-    display: grid;
-  }
-  .md\:ds-inline-grid {
-    display: inline-grid;
-  }
   .md\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
@@ -10762,50 +10670,74 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   .sm\:h6, .sm\:heading-6 {
     font-size: var(--heading-6);
   }
-  .sm\:display-xl {
-    font-size: var(--display-xl);
+  .sm\:font-size-1, .sm\:font-size-6xs {
+    font-size: var(--6xs);
   }
-  .sm\:display-lg {
-    font-size: var(--display-lg);
+  .sm\:font-size-2, .sm\:font-size-5xs {
+    font-size: var(--5xs);
   }
-  .sm\:display-md {
-    font-size: var(--display-md);
+  .sm\:font-size-3, .sm\:font-size-4xs {
+    font-size: var(--4xs);
   }
-  .sm\:display-sm {
-    font-size: var(--display-sm);
+  .sm\:font-size-4, .sm\:font-size-3xs {
+    font-size: var(--3xs);
   }
-  .sm\:display-xs {
-    font-size: var(--display-xs);
+  .sm\:font-size-5, .sm\:font-size-2xs {
+    font-size: var(--2xs);
   }
-  .sm\:title-xl {
-    font-size: var(--title-xl);
+  .sm\:font-size-6, .sm\:font-size-xs {
+    font-size: var(--xs);
   }
-  .sm\:title-lg {
-    font-size: var(--title-lg);
+  .sm\:font-size-7, .sm\:font-size-sm {
+    font-size: var(--sm);
   }
-  .sm\:title-md {
-    font-size: var(--title-md);
+  .sm\:font-size-8, .sm\:font-size-md {
+    font-size: var(--md);
   }
-  .sm\:title-sm {
-    font-size: var(--title-sm);
+  .sm\:font-size-9, .sm\:font-size-lg {
+    font-size: var(--lg);
   }
-  .sm\:title-xs {
-    font-size: var(--title-xs);
+  .sm\:font-size-10, .sm\:font-size-xl {
+    font-size: var(--xl);
   }
-  .sm\:font-size-xl {
-    font-size: var(--font-size-xl);
+  .sm\:font-size-11, .sm\:font-size-2xl {
+    font-size: var(--2xl);
   }
-  .sm\:font-size-lg {
-    font-size: var(--font-size-lg);
+  .sm\:font-size-12, .sm\:font-size-3xl {
+    font-size: var(--3xl);
   }
-  .sm\:font-size-md {
-    font-size: var(--font-size-md);
+  .sm\:font-size-13, .sm\:font-size-4xl {
+    font-size: var(--4xl);
   }
-  .sm\:font-size-sm {
-    font-size: var(--font-size-sm);
+  .sm\:font-size-14, .sm\:font-size-5xl {
+    font-size: var(--5xl);
   }
-  .sm\:font-size-xs {
-    font-size: var(--font-size-xs);
+  .sm\:font-size-15, .sm\:font-size-6xl {
+    font-size: var(--6xl);
+  }
+  .sm\:font-size-16, .sm\:font-size-7xl {
+    font-size: var(--7xl);
+  }
+  .sm\:font-size-17, .sm\:font-size-8xl {
+    font-size: var(--8xl);
+  }
+  .sm\:font-size-18, .sm\:font-size-9xl {
+    font-size: var(--9xl);
+  }
+  .sm\:font-size-19, .sm\:font-size-10xl {
+    font-size: var(--10xl);
+  }
+  .sm\:font-size-20, .sm\:font-size-12xl {
+    font-size: var(--12xl);
+  }
+  .sm\:font-size-21, .sm\:font-size-13xl {
+    font-size: var(--13xl);
+  }
+  .sm\:font-size-22, .sm\:font-size-14xl {
+    font-size: var(--14xl);
+  }
+  .sm\:font-size-23, .sm\:font-size-15xl {
+    font-size: var(--15xl);
   }
   .sm\:font-style-normal {
     font-style: normal;
@@ -12525,50 +12457,6 @@ input[type=radio].switch:where(:is(:checked)):disabled::after {
   }
   .sm\:cursor-text {
     cursor: text;
-  }
-  .sm\:ds-block {
-    display: block;
-  }
-  .sm\:ds-inline {
-    display: inline;
-  }
-  .sm\:ds-inline-block {
-    display: inline-block;
-  }
-  .sm\:ds-none {
-    display: none;
-  }
-  .sm\:ds-flex {
-    display: flex;
-  }
-  .sm\:ds-flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .sm\:ds-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sm\:ds-flex-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .sm\:ds-inline-flex {
-    display: inline-flex;
-  }
-  .sm\:ds-inline-flex-center {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sm\:ds-grid {
-    display: grid;
-  }
-  .sm\:ds-inline-grid {
-    display: inline-grid;
   }
   .sm\:flex-bgs {
     flex-basis: 0;
